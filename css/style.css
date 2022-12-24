@@ -1,0 +1,63 @@
+
+*{
+    margin: 0;
+    padding:0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height:2000px;
+    background-color:#F9F9F9;
+    line-height: 1.2;
+    font-family: homa, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    color: #13064B;
+  }
+  @font-face {
+    font-family: homa;
+    src: url(../font/B\ Homa_0.ttf);
+  }
+
+/* NOTE Progress Bar */
+#progress-bar{
+    position:fixed;
+    height:5px;
+    margin-top:2px;
+    width:0%;
+    background:#56CCF2;
+    background:-webkit-linear-gradient(to right,#4A9FB7,#56CCF2);
+    background:linear-gradient(to right,#4A9FB7,#56CCF2)
+}
+/* *-----------------END------------------- */
+
+/*  NOTE Back to top  */
+#btn-back-to-top {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 30px;
+    right: 20px;
+    opacity: 0;
+    background-color: #4A9FB7;
+    color:white;
+    border-radius:45px;
+}
+/* *-----------------END------------------- */
+
+
+/* NOTE Appear Animation */
+.appear{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .appear.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+/* *-----------------END------------------- */
