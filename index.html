@@ -14,15 +14,122 @@
         <title>Online Shop</title>
     </head>
     <body>
-        <div id="progress-bar" class="progress-bar"></div>
-        <button
-        type="button"
-        class="btn btn-floating"
-        id="btn-back-to-top"
-        >
-        <i class="bi bi-arrow-up"></i>
-        </button>
+        <div class="tools">
+            <div id="progress-bar" class="progress-bar"></div>
+            <button
+            type="button"
+            class="btn btn-floating"
+            id="btn-back-to-top">
+            <i class="bi bi-arrow-up"></i>
+            </button>
+        </div>
+        
+        <header>
+            <!-- SECTION navbar expand on mobile -->
+            <nav class="navbar bg-light fixed-top d-md-none">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Offcanvas navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                              <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
+                  
+                </div>
+              </nav>
 
+              <!-- SECTION navbar expand on computer -->
+              <nav class="navbar navbar-expand-md d-none d-md-block fixed-top bg-white">
+                <div class="container pc-navbar fw-bold">
+                    <a class="navbar-brand" href="#">
+                        <figure><img src="./images/logo.svg" alt=""></figure>
+                    </a>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          پروژه ها
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          باندل ها
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">درباره ما</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">ارتباط با ما</a>
+                      </li>
+                    </ul>
+                    <form class="form border">
+                        <input class="input" placeholder="Type your text" required="" type="text">
+                        <button class="reset" type="reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        <button>
+                            <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                                <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+              </nav>
+        </header>
+        <section>
+            <div class="banner">
+
+            </div>
+        </section>
 
 
 
