@@ -8,7 +8,7 @@
 
 body {
     height:2000px;
-    background-color:#F9F9F9;
+    background-color:#353958;
     line-height: 1.2;
     font-family: homa, sans-serif;
     scroll-behavior: smooth;
@@ -75,7 +75,7 @@ header .pc-navbar{
 }
 #navbar{
   width: 100%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   transition: .5s all ease-in-out;
   -webkit-transition: .5s all ease-in-out;
   -moz-transition:  .5s all ease-in-out;
@@ -88,11 +88,16 @@ header .pc-navbar{
   -webkit-transition: .5s all ease-in-out;
   -moz-transition:  .5s all ease-in-out;
 }
-.pc-navbar ul li{
+.pc-navbar .li-style{
     padding:0.5rem;
 }
+.pc-navbar ul li a{
+  transition: .3s all ease-in-out;
+  -webkit-transition: .3s all ease-in-out;
+  -moz-transition:  .3s all ease-in-out;
+}
 .pc-navbar ul li a:hover{
-  color:#4A9FB7;
+  color:#4A9FB7 !important;
 }
 
 .dropdown-style{
