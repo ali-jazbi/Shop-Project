@@ -13,7 +13,7 @@ body {
     font-family: homa, sans-serif;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
-    font-size: 15px;
+    font-size: 0.938rem;
     color: #13064B;
   }
   @font-face {
@@ -73,13 +73,58 @@ header .pc-navbar{
     align-items: center !important;
     font-size: 1.1rem;
 }
+#navbar{
+  width: 100%;
+  background-color: white;
+  transition: .5s all ease-in-out;
+  -webkit-transition: .5s all ease-in-out;
+  -moz-transition:  .5s all ease-in-out;
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px);
+
+}
 .pc-navbar ul li{
     padding:0.5rem;
 }
+.pc-navbar ul li a:hover{
+  color:#4A9FB7;
+}
 
-/* From uiverse.io by @satyamchaudharydev */
-/* removing default style of button */
-
+.dropdown-style{
+    position: absolute;
+    top: 80%;
+    left: -75%;
+    width: 240px;
+    height:200px;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 25px 65px 0 rgb(0 0 0 / 10%);
+    display: block;
+    margin: 0;
+    opacity: 0;
+    padding: 10px!important;
+    text-align: right;
+    transform: scale(.95);
+    transform-origin: top;
+    visibility: hidden;
+    transition: .2s all ease-in-out;
+    -webkit-transition: .2s all ease-in-out;
+    -moz-transition:  .2s all ease-in-out;
+}
+.dropdown:hover .dropdown-style{
+  top: 120%;
+  opacity: 1;
+  visibility:visible;
+}
+.dropdown-style .dropdown-custom-item{
+  height: 15%;
+  transition: .2s
+}
+.dropdown-style .dropdown-custom-item:hover{
+  background-color: #4a9fb729;
+  border-radius: 10px;
+}
 .form button {
     border: none;
     background: none;
@@ -92,8 +137,8 @@ header .pc-navbar{
     --height-of-input: 40px;
     --border-height: 2px;
     --input-bg: #fff;
-    --border-color: #2f2ee9;
-    --border-radius: 30px;
+    --border-color: #4A9FB7;
+    --border-radius: 20px;
     --after-border-radius: 1px;
     position: relative;
     width: var(--width-of-input);
@@ -108,7 +153,8 @@ header .pc-navbar{
     border-radius: var(--border-radius);
     -webkit-transition: border-radius 0.5s ease;
     transition: border-radius 0.5s ease;
-    background: var(--input-bg,#fff);
+    box-shadow:  6px 6px 32px #e7e7e7,
+                -6px -6px 32px #fdfdfd;
   }
   /* styling of Input */
   .input {
