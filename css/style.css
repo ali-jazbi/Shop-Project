@@ -81,7 +81,12 @@ header .pc-navbar{
   -moz-transition:  .5s all ease-in-out;
   backdrop-filter: blur(2.6px);
   -webkit-backdrop-filter: blur(2.6px);
-
+}
+#navbar-sm{
+  background-color: white;
+  transition: .5s all ease-in-out;
+  -webkit-transition: .5s all ease-in-out;
+  -moz-transition:  .5s all ease-in-out;
 }
 .pc-navbar ul li{
     padding:0.5rem;
@@ -227,7 +232,39 @@ header .pc-navbar{
     width: 17px;
     margin-top: 3px;
   }
-
+  .navbar-nav li a {
+    color: rgb(5, 0, 0) !important;
+  }
+  @media (min-width : 992px) {
+    .offcanvas {
+      visibility      : visible;
+      position        : relative;
+      background      : none;
+      border          : none;
+      justify-content : end;
+      color           : red;
+    }
+  }
+  @media (max-width : 992px) {
+    .offcanvas {
+      width : 280px !important;
+    }
+    .offcanvas li{
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .offcanvas-start-lg {
+      top          : 0;
+      left         : 0;
+      border-right : 1px solid rgba(0, 0, 0, .2);
+      transform    : translateX(-100%);
+    }
+    .form{
+      box-shadow: 1px 10px 20px #f4f4f4,
+                1px 10px 20px #fdfdfd;
+    }
+  }
 .banner{
     width:100%;
     height:34.563rem;

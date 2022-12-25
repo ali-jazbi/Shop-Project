@@ -1,6 +1,7 @@
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 let nav=document.getElementById("navbar");
+let navSM=document.getElementById("navbar-sm");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
@@ -11,11 +12,13 @@ function scrollFunction() {
     document.documentElement.scrollTop > 380) 
     {
     nav.style.position="fixed";
-    nav.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
+    nav.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)";
+    navSM.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)";
     nav.style.top = "0px";
   } else {
     nav.style.position="static";
     nav.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)"
+    navSM.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)"
     nav.style.top = "-50px";
   }
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
