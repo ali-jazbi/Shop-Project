@@ -12,7 +12,7 @@ function scrollFunction() {
     document.documentElement.scrollTop > 380) 
     {
     nav.style.position="fixed";
-    nav.style.backgroundColor="rgba(255, 255, 255, .91)"
+    nav.style.backgroundColor="rgba(255, 255, 255, .93)";
     nav.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)";
     navSM.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)";
     nav.style.top = "0px";
@@ -23,6 +23,7 @@ function scrollFunction() {
     navSM.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)"
     nav.style.top = "-50px";
   }
+
   if (
     document.body.scrollTop > 20 ||
     document.documentElement.scrollTop > 20

@@ -23,17 +23,18 @@ body {
 
 /*  NOTE Back to top  */
 #btn-back-to-top{
-    position: fixed;
+    position: fixed !important;
     width: 45px;
     height: 45px;
     bottom: 30px;
     right: 20px;
     opacity: 0;
-    background-color: #4A9FB7;
+    background-color: #4a9fb798;
     color:white;
     border-radius:45px;
+    
 }
-#btn-back-to-top:hover{
+#btn-back-to-top:hover , #btn-back-to-top:active{
     background-color: #1e6275;
 }
 /* *-----------------END------------------- */
@@ -55,7 +56,7 @@ body {
 
 /* NOTE Navbar */
 header .pc-navbar{
-    height:88px;
+    height:78px;
     width: 100%;
     display: flex;
     align-items: center !important;
@@ -63,12 +64,12 @@ header .pc-navbar{
 }
 #navbar{
   width: 100%;
-  background-color: rgb(255, 255, 255);
   transition: .5s all ease-in-out;
   -webkit-transition: .5s all ease-in-out;
   -moz-transition:  .5s all ease-in-out;
-  backdrop-filter: blur(2.6px);
-  -webkit-backdrop-filter: blur(2.6px);
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 #navbar-sm{
   background-color: white;
@@ -301,4 +302,10 @@ header .pc-navbar{
   .btn-banner{
     width: 35%;
   }
+  #btn-back-to-top:hover{
+    background-color: #4a9fb798;
+  }
+  #btn-back-to-top:active{
+    background-color: #1e6275;
+}
 }
