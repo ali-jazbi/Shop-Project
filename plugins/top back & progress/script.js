@@ -23,10 +23,6 @@ function scrollFunction() {
     navSM.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)"
     nav.style.top = "-50px";
   }
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  let scrolled = (winScroll / height) * 100;
-  document.getElementById("progress-bar").style.width = scrolled + "%";
   if (
     document.body.scrollTop > 20 ||
     document.documentElement.scrollTop > 20

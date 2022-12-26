@@ -19,21 +19,7 @@ body {
   @font-face {
     font-family: homa;
     src: url(../font/B\ Homa_0.ttf);
-    font-family:iranSans;
-    src: url(../font/Iranian\ Sans.ttf);
   }
-
-/* NOTE Progress Bar */
-#progress-bar{
-    position:fixed;
-    height:5px;
-    margin-top:2px;
-    width:0%;
-    background:#56CCF2;
-    background:-webkit-linear-gradient(to right,#4A9FB7,#56CCF2);
-    background:linear-gradient(to right,#4A9FB7,#56CCF2)
-}
-/* *-----------------END------------------- */
 
 /*  NOTE Back to top  */
 #btn-back-to-top{
