@@ -312,4 +312,7 @@ header .pc-navbar{
   .h1-banner{
     margin-top:6rem !important
   }
+  .btn-banner{
+    width: 35%;
+  }
 }
