@@ -345,3 +345,90 @@ header .pc-navbar{
   height:52px;
   font-size: 20px;
 }
+
+
+/* NOTE Footer */
+.footer-main{
+  width:100%;
+  height:auto;
+  margin-top:100px;
+  background-color:#1A1D2D;
+  color:white;
+
+}
+.footer-main .footer-top{
+  width:100%;
+  height:auto;
+  padding: 100px 0 50px;
+}
+.footer-main .footer-top h3{
+  font-size: 1.563rem;
+  color: #fff;
+  position: relative;
+  padding-bottom: 20px;
+}
+.footer-main .footer-top h3::after{
+  content: "";
+    display: block;
+    width: 100%;
+    width: 30px;
+    height: 1px;
+    margin-top: 20px;
+    background-color: #b0b0b1;
+}
+.footer-main .footer-top ul{
+  padding-right: 0;
+}
+.footer-main .footer-top ul li{
+  display: block;
+  line-height: 1.8;
+}
+.footer-main .footer-top ul li a{
+    color: #93a1b0;
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 1.125rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.15s all ease-in-out;
+}
+.footer-main .footer-top ul li a:hover{
+  color:white
+}
+
+.footer-main .footer-bottom{
+  width: 100%;
+  height:auto;
+  position: relative;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.142);
+}
+.footer-main .footer-bottom .footer_footerLabel{
+    position: absolute;
+    top: -12px;
+    font-size: 16px;
+    line-height: 1;
+    display: inline-block;
+    background: #1a1d2d;
+    padding: 5px 10px;
+    margin-right: -10px;
+    color: #fff;
+}
+.footer-main .footer-bottom span{
+    color: rgb(240, 240, 240);
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.footer-main .footer-bottom ul li{
+  display: inline-block !important;
+}
+.footer-main .footer-bottom ul li a{
+  color:white
+}
+.footer-main .footer-bottom .footer_copyrightText p{
+  color: #93a1b0!important;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
