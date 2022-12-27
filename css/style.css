@@ -7,7 +7,7 @@
 }
 
 body {
-    height:3000px;
+    height:2900px;
     background-color:#F9F9F9;
     line-height: 1.2;
     font-family: homa,sans-serif;
@@ -276,6 +276,7 @@ header .pc-navbar{
 }
 .btn-banner , .main-btn{
   width: 30%;
+  height:45px;
   border: 1px solid rgba(255, 0, 0, 0);
   font-size: 1.2rem;
   background: linear-gradient(170deg,#4ea8b9 25%,#2a5caa 180%);
@@ -335,4 +336,12 @@ header .pc-navbar{
     box-shadow: 0 1.5em 1.5em -1.4em var(--hover);
     transform: translateY(-0.25em);
   }
+}
+.products .main-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:180px;
+  height:52px;
+  font-size: 20px;
 }
