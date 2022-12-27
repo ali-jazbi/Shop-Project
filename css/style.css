@@ -7,7 +7,7 @@
 }
 
 body {
-    height:2000px;
+    height:3000px;
     background-color:#F9F9F9;
     line-height: 1.2;
     font-family: homa,sans-serif;
@@ -302,10 +302,37 @@ header .pc-navbar{
   .btn-banner{
     width: 35%;
   }
-  #btn-back-to-top:hover{
-    background-color: #4a9fb798;
+  #btn-back-to-top{
+    background-color: #4a9fb75d;
   }
   #btn-back-to-top:active{
     background-color: #1e6275;
 }
+}
+/* *-----------------END------------------- */
+
+/* NOTE Product Cards */
+
+.products .product-card .card{
+  border: 1px solid rgba(255, 0, 0, 0);
+  background: #ffffff;
+  box-shadow:
+  1px 5px 11px #dbdbdb,
+  -1px -5px 11px #ffffff;
+  transition:.2s all ease-in-out;
+  --hover: #9e9c9c;
+}
+@media (min-width: 768px) {
+.products .product-card .card:hover{
+  cursor: pointer;
+  box-shadow: 0 1.5em 1.5em -1.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+}
+@media (max-width: 768px) {
+  .products .product-card .card:active{
+    cursor: pointer;
+    box-shadow: 0 1.5em 1.5em -1.4em var(--hover);
+    transform: translateY(-0.25em);
+  }
 }
