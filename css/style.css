@@ -356,6 +356,52 @@ header .pc-navbar{
   color:white;
 
 }
+.footer-main .back-top{
+  width:100%;
+  height:3rem;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size:0.913rem ;
+  background-color:#353b5b;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+.footer-main a{
+  text-decoration: none;
+}
+@media (max-width: 768px){
+  .footer-main .back-top{
+    height:2rem;
+    font-size:0.813rem ;
+  }
+}
+.footer-main button:hover {
+  color: rgb(220, 217, 217);
+}
+.footer-main button:after {
+  content: "";
+  background: #515a8a;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+} 
+.footer-main button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+ }
 .footer-main .footer-top{
   width:100%;
   height:auto;
