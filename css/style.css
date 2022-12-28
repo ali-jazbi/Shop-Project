@@ -48,7 +48,7 @@ body {
     transition: 1s all ease;
   }
   
-  .appear.active{
+.appear.active{
     transform: translateY(0);
     opacity: 1;
   }
@@ -364,17 +364,18 @@ header .pc-navbar{
 .footer-main .footer-top h3{
   font-size: 1.563rem;
   color: #fff;
-  position: relative;
+  /* position: relative; */
   padding-bottom: 20px;
 }
 .footer-main .footer-top h3::after{
-  content: "";
+    content: "";
     display: block;
-    width: 100%;
     width: 30px;
     height: 1px;
     margin-top: 20px;
+    margin: 30px auto auto auto;
     background-color: #b0b0b1;
+
 }
 .footer-main .footer-top ul{
   padding-right: 0;
@@ -410,9 +411,6 @@ header .pc-navbar{
     line-height: 1;
     display: inline-block;
     background: #1a1d2d;
-    padding: 5px 10px;
-    margin-right: -10px;
-    color: #fff;
 }
 .footer-main .footer-bottom span{
     color: rgb(240, 240, 240);
