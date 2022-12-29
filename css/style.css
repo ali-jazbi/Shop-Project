@@ -70,10 +70,26 @@ header .pc-navbar{
   backdrop-filter: blur(3px);
 }
 #navbar-sm{
+  height:3.225rem;
   background-color: white;
   transition: .5s all ease-in-out;
   -webkit-transition: .5s all ease-in-out;
   -moz-transition:  .5s all ease-in-out;
+}
+#navbar-sm .navbar-toggler{
+  border: none !important;
+}
+#navbar-sm .navbar-toggler:hover , #navbar-sm .navbar-toggler:active , #navbar-sm .navbar-toggler:focus{
+  border: none !important;
+}
+#navbar-sm .form{
+  width: 100%;
+  border-radius:0;
+  box-shadow: none;
+  border-radius: 3px;
+}
+#navbar-sm .form:focus-within{
+  border-radius: 10px 10px 0 0 !important;
 }
 .pc-navbar .li-style{
     padding:0.5rem;

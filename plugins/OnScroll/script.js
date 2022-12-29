@@ -2,12 +2,21 @@
 let mybutton = document.getElementById("btn-back-to-top");
 let nav=document.getElementById("navbar");
 let navSM=document.getElementById("navbar-sm");
+let searchSM=document.getElementById("search-sm");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
 };
 
 function scrollFunction() {
+  if (document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20) 
+    {
+      searchSM.style.display="none";
+    }
+    else{
+      searchSM.style.display="flex";
+    }
   if (document.body.scrollTop > 380 ||
     document.documentElement.scrollTop > 380) 
     {
