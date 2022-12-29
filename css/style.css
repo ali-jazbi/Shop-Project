@@ -320,6 +320,11 @@ header .pc-navbar{
     margin-top:110px;
     align-items:flex-start
   }
+  .navbar-toggler , .btn , .btn-white , .btn-close{
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
   .home-banner #carouselExample img{
     height:233px;
   }
