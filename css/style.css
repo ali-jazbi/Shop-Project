@@ -5,9 +5,7 @@
     border: 0;
     box-sizing: border-box;
 }
-
 body {
-    height:2900px;
     background-color:#F9F9F9;
     line-height: 1.2;
     font-family: homa,sans-serif;
@@ -16,7 +14,7 @@ body {
     font-size: 0.938rem;
     color: #13064B;
   }
-  @font-face {
+@font-face {
     font-family: homa;
     src: url(../font/B\ Homa_0.ttf);
   }
