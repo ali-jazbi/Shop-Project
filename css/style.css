@@ -91,6 +91,15 @@ header .pc-navbar{
 #navbar-sm .form:focus-within{
   border-radius: 10px 10px 0 0 !important;
 }
+#navbar-sm .dropdown .dropdown-menu{
+  width: 10px;
+  margin-top:10px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 10px rgb(225, 225, 225);
+}
+#navbar-sm .dropdown .dropdown-menu li{
+  font-size:0.9rem;
+}
 .pc-navbar .li-style{
     padding:0.5rem;
 }
