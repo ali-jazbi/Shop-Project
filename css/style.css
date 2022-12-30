@@ -419,6 +419,9 @@ header .pc-navbar{
     margin-top:98px;
     align-items:center
   }
+  .home-banner img{
+    height:240px;
+  }
   .navbar-toggler , .btn , .btn-white , .btn-close{
     border: 0 !important;
     outline: 0 !important;
