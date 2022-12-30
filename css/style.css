@@ -588,7 +588,7 @@ header .pc-navbar{
 .footer-main .footer-top{
   width:100%;
   height:auto;
-  padding: 100px 0 50px;
+  padding: 70px 0 10px;
 }
 .footer-main .footer-top h3{
   font-size: 1.563rem;
@@ -616,7 +616,7 @@ header .pc-navbar{
     color: #93a1b0;
     display: inline-block;
     padding: 6px 0;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     text-decoration: none;
     font-weight: 500;
     transition: 0.15s all ease-in-out;
