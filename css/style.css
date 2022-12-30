@@ -383,7 +383,8 @@ header .pc-navbar{
 
 
 .main-head{
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 /* NOTE Home Banner */
 .home-banner{
