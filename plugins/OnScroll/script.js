@@ -31,7 +31,6 @@ function scrollFunction() {
     nav.style.position="static";
     nav.style.backgroundColor="rgb(255, 255, 255)";
     nav.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)";
-    nav.style.zIndex="0";
     nav.style.top = "-50px";
   }
 
