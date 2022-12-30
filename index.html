@@ -66,8 +66,11 @@
                   </div>
               </div>
               <nav id="menu">
-          
+               <div style="height:50px" class="row w-100 d-flex align-items-center justify-content-end">
+                <button class="btn btn-dark btn-close close-btn" onclick="closenav()"></button>
+               </div>
                   <ul>
+                   
                     <!-- <div class="gradient"></div> -->
                       <li class="Selected"><a href="#/">خانه</a></li>
                       <div class="gradient"></div>
@@ -508,7 +511,6 @@
         </section>
         <!-- SECTION Footer -->
         <footer class="footer-main">
-            <a id="btn-footer" href="#top"><button dir="ltr" class="back-top bi bi-arrow-up-short">بازگشت به بالا</button></a>
             <div class="footer-top">
               <div class="container">
                 <div class="row">
@@ -631,7 +633,6 @@
         <script src="./js/menu.js"></script>
         <script>
           var menu = new MmenuLight(document.querySelector("#menu"), "all");
-
             var navigator = menu.navigation({
                 // selectedClass: 'Selected',
                 // slidingSubmenus: true,
@@ -642,7 +643,6 @@
             var drawer = menu.offcanvas({
                 // position: 'left'
             });
-
             //	Open the menu.
             document
                 .querySelector('a[href="#menu"]')
@@ -650,6 +650,9 @@
                     evnt.preventDefault();
                     drawer.open();
                 });
+                function closenav(){
+                  drawer.close()
+                }
         </script>
     </body>
 </html>
