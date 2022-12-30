@@ -189,6 +189,7 @@ body.mm-ocd-opened{
 .mm-spn a,.mm-spn span{
     position:relative;
     z-index:1;
+    font-size: 12px;
     padding:calc((var(--mm-spn-item-height) - var(--mm-spn-line-height))/ 2) var(--mm-spn-item-indent)
 }
 .mm-spn a{
@@ -210,7 +211,7 @@ body.mm-ocd-opened{
     opacity:.15
 }
 .mm-spn span{
-    background:0 0
+    background:0 0;
 }
 .mm-spn.mm-spn--navbar{
     cursor:pointer
