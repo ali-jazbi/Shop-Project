@@ -171,6 +171,7 @@ header .pc-navbar{
   transition: .5s all ease-in-out;
   -webkit-transition: .5s all ease-in-out;
   -moz-transition:  .5s all ease-in-out;
+  z-index: 99999999;
 }
 #navbar-sm .navbar-toggler{
   border: none !important;
@@ -192,6 +193,7 @@ header .pc-navbar{
   width: 10px;
   margin-top:10px;
   border-radius: 10px;
+  z-index: 999999999999;
   box-shadow: 0px 8px 10px rgb(225, 225, 225);
 }
 #navbar-sm .dropdown .dropdown-menu li{
@@ -214,7 +216,6 @@ header .pc-navbar{
     left: -75%;
     width: 240px;
     height:200px;
-    z-index: 999;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 25px 65px 0 rgb(0 0 0 / 10%);
@@ -554,7 +555,7 @@ header .pc-navbar{
   font-size:0.913rem ;
   background-color:#37475A;
   color: rgb(255, 255, 255);
-  z-index: 1;
+  z-index: 9999999;
 }
 .footer-main a{
   text-decoration: none;
