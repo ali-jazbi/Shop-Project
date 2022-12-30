@@ -316,35 +316,6 @@ header .pc-navbar{
   .navbar-nav li a {
     color: rgb(5, 0, 0) !important;
   }
-  @media (min-width : 992px) {
-    .offcanvas {
-      visibility      : visible;
-      position        : relative;
-      background      : none;
-      border          : none;
-      justify-content : end;
-      color           : red;
-    }
-  }
-  @media (max-width : 992px) {
-    .offcanvas {
-      width : 280px !important;
-    }
-    .offcanvas li{
-      padding: 10px;
-      font-size: 1rem;
-    }
-    .offcanvas-start-lg {
-      top          : 0;
-      right        : 0;
-      border-right : 1px solid rgba(0, 0, 0, .2);
-      transform    : translateX(100%);
-    }
-    .form{
-      box-shadow: 1px 10px 20px #f4f4f4,
-                1px 10px 20px #fdfdfd;
-    }
-  }
 
 /* *-----------------END------------------- */
 
@@ -383,7 +354,7 @@ header .pc-navbar{
 @media (max-width: 992px){
   .home-banner{
     height:auto;
-    margin-top:100px;
+    margin-top:110px;
     align-items:center
   }
   .home-banner img{
@@ -393,9 +364,6 @@ header .pc-navbar{
     border: 0 !important;
     outline: 0 !important;
     box-shadow: none !important;
-  }
-  .home-banner #carouselExample img{
-    height:233px;
   }
   .home-banner h1{
     font-size: 2.3rem !important;

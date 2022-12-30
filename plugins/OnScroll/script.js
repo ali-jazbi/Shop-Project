@@ -15,10 +15,10 @@ function scrollFunction() {
     document.documentElement.scrollTop > 20) 
     {
       navSM.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)";
-      // searchSM.style.display="none";
+      searchSM.style.display="none";
     }
     else{
-      // searchSM.style.display="flex";
+      searchSM.style.display="flex";
       navSM.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)"
     }
   if (document.body.scrollTop > 380 ||

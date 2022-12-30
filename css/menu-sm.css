@@ -164,7 +164,6 @@ body.mm-ocd-opened{
     background:inherit;
     cursor:pointer;
 	padding:7px;
-	/* border-bottom:1px solid rgba(0, 0, 0, 0.091); */
 }
 .mm-spn li:before{
     content:"";
@@ -311,21 +310,11 @@ body.mm-ocd-opened{
  .header nav {
 	display: none;
 }
-
-.header{
-	text-align: center;
-}
 .header{
 	background: #ffffff;
-	font-size: 16px;
-	font-weight: bold;
-	color: rgb(0, 0, 0);
-	line-height: 50px;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    color:black;
 	width: 100%;
-	height: 50px;
-	padding: 0 50px;
+	padding: 0 10px;
 }
 .gradient {
 	height: 20px;
@@ -343,3 +332,13 @@ body.mm-ocd-opened{
 	height: 3px;
 	background: linear-gradient(left, transparent, rgba(0,0,0,0.02), rgba(0,0,0,0.02), transparent);
 }
+#navbar-sm .form{
+    width: 100%;
+    border-radius:0;
+    box-shadow: none;
+    background-color:white;
+    border-radius: 3px;
+  }
+  #navbar-sm .form:focus-within{
+    border-radius: 10px 10px 0 0 !important;
+  }

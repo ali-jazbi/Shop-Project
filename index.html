@@ -46,10 +46,27 @@
         <!-- SECTION Navbar -->
         <header class="main-head">
             <!-- SECTION navbar expand on mobile -->
-            <div id="navbar-sm" class="header fixed-top d-md-none">
-              <a href="#menu"><i style="font-size:30px;" class="bi bi-list"></i></a>
-              Demo
+            <div id="navbar-sm" class="header fixed-top d-md-none w-100 d-flex align-items-center justify-content-center flex-column">
+              <div style="height:3.525rem;" class="row w-100 d-flex justify-content-around align-items-center">
+                <div class="top-nav w-50 d-flex">
+                  <a class="navbar-brand" href="#menu">
+                    <i style="font-size:30px;" class="bi bi-list"></i>
+                  </a>
+                  <a class="navbar-brand ps-3" href="#">
+                    <img src="./images/amazon.svg" width="60" height="35">
+                  </a>
+                </div>
+                  <div class="top-nav w-50 text-end">
+                    <a class="navbar-brand pe-3" href="#">
+                      <i style="font-size:20px;" class="bi bi-person-circle"></i>
+                    </a>
+                    <a class="navbar-brand" href="#">
+                      <i style="font-size:20px;" class="bi bi-cart-dash"></i>
+                    </a>
+                  </div>
+              </div>
               <nav id="menu">
+          
                   <ul>
                     <!-- <div class="gradient"></div> -->
                       <li class="Selected"><a href="#/">خانه</a></li>
@@ -59,23 +76,29 @@
                           <div class="gradient"></div>
                           <ul>
                               <li><a href="#/">استاتیک</a></li>
+                              <div class="gradient"></div>
                               <li>
                                   <span>بوت استرپ</span>
+                                  <div class="gradient"></div>
                                   <ul>
                                       <li>
                                           <a href="#/">آزمایشی</a>
                                       </li>
+                                      <div class="gradient"></div>
                                       <li>
                                           <a href="#/">رایگان</a>
                                       </li>
+                                      <div class="gradient"></div>
                                       <li>
                                           <a href="#/">ویژه</a>
                                       </li>
+                                      <div class="gradient"></div>
                                   </ul>
                               </li>
                               <li>
                                   <a href="#/">جی کوئری</a>
                               </li>
+                              <div class="gradient"></div>
                           </ul>
                       </li>
                       <li><a href="#/">درباره ما</a></li>
@@ -84,6 +107,19 @@
                       <div class="gradient"></div>
                   </ul>
               </nav>
+              <form id="search-sm" class="form border mt-2">
+                <input class="input" placeholder="جست و جو ... " required="" type="text">
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <button>
+                    <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+              </form>
           </div>
 
               <!-- SECTION navbar expand on computer -->
