@@ -175,9 +175,9 @@ body.mm-ocd-opened{
     height:10px;
     border-top:2px solid;
     border-right:2px solid;
-    -webkit-transform:rotate(45deg) translate(0,-50%);
-    -ms-transform:rotate(45deg) translate(0,-50%);
-    transform:rotate(45deg) translate(0,-50%);
+    -webkit-transform:rotate(230deg) translate(0,-50%);
+    -ms-transform:rotate(230deg) translate(0,-50%);
+    transform:rotate(230deg) translate(0,-50%);
     opacity:.4
 }
 .mm-spn li:after{
