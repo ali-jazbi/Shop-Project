@@ -25,11 +25,13 @@ function scrollFunction() {
     nav.style.position="fixed";
     nav.style.backgroundColor="rgba(255, 255, 255, .93)";
     nav.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)";
+    nav.style.zIndex="9999";
     nav.style.top = "0px";
   } else {
     nav.style.position="static";
-    nav.style.backgroundColor="rgb(255, 255, 255)"
-    nav.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)"
+    nav.style.backgroundColor="rgb(255, 255, 255)";
+    nav.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)";
+    nav.style.zIndex="0";
     nav.style.top = "-50px";
   }
 
