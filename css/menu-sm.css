@@ -186,10 +186,10 @@ body.mm-ocd-opened{
     margin-right:var(--mm-spn-item-indent);
     opacity:.15
 }
-.mm-spn a,.mm-spn span{
+.mm-spn a, .mm-spn span{
     position:relative;
     z-index:1;
-    font-size: 12px;
+    font-size: 16px;
     padding:calc((var(--mm-spn-item-height) - var(--mm-spn-line-height))/ 2) var(--mm-spn-item-indent)
 }
 .mm-spn a{

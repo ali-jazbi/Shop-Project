@@ -212,6 +212,10 @@ header .pc-navbar{
   border-radius: 10px;
   cursor: pointer;
 }
+.dropdown-menu {
+  max-height: 280px !important;
+  overflow-y: auto;
+}
 .form button {
     border: none;
     background: none;
@@ -220,7 +224,7 @@ header .pc-navbar{
   /* styling of whole input container */
   .form {
     --timing: 0.3s;
-    --width-of-input: 200px;
+    --width-of-input: 250px;
     --height-of-input: 40px;
     --border-height: 2px;
     --input-bg: #fff;
@@ -242,6 +246,12 @@ header .pc-navbar{
     transition: border-radius 0.5s ease;
     box-shadow:  6px 6px 32px #e7e7e7,
                 -6px -6px 32px #fdfdfd;
+  }
+  .form .dropdown{
+    margin-right: -5px;
+  }
+  .form .dropdown-toggle{
+    color:black;
   }
   /* styling of Input */
   .input {
