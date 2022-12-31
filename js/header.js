@@ -1,184 +1,261 @@
-(function() {
-
-    var $$ = function(selector, context) {
-      var context = context || document;
-      var elements = context.querySelectorAll(selector);
-      return [].slice.call(elements);
+(function () {
+    'use strict';
+  
+    var BODY_BACKGROUNDS = [
+      '#8850FF',
+      '#FFBA00',
+      '#4054FF'
+    ];
+  
+    function Slider () {
+      this.cards = document.querySelectorAll('.card1');
+      this.currentIndex = 0;
+  
+      this.isDragging = false;
+      this.startX = 0;
+      this.currentX = 0;
+  
+      this.initEvents();
+      this.setActivePlaceholder();
+    }
+  
+    // initialize drag events
+    Slider.prototype.initEvents = function () {
+      document.addEventListener('touchstart', this.onStart.bind(this));
+      document.addEventListener('touchmove', this.onMove.bind(this));
+      document.addEventListener('touchend', this.onEnd.bind(this));
+  
+      document.addEventListener('mousedown', this.onStart.bind(this));
+      document.addEventListener('mousemove', this.onMove.bind(this));
+      document.addEventListener('mouseup', this.onEnd.bind(this));
+  
     };
   
-    function _fncSliderInit($slider, options) {
-      var prefix = ".fnc-";
+    // set active placeholder
+    Slider.prototype.setActivePlaceholder = function () {
+      var placeholders = document.querySelectorAll('.cards-placeholder__item');
+      var activePlaceholder = document.querySelector('.cards-placeholder__item--active')
   
-      var $slider = $slider;
-      var $slidesCont = $slider.querySelector(prefix + "slider__slides");
-      var $slides = $$(prefix + "slide", $slider);
-      var $controls = $$(prefix + "nav__control", $slider);
-      var $controlsBgs = $$(prefix + "nav__bg", $slider);
-      var $progressAS = $$(prefix + "nav__control-progress", $slider);
-  
-      var numOfSlides = $slides.length;
-      var curSlide = 1;
-      var sliding = false;
-      var slidingAT = +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
-      var slidingDelay = +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
-  
-      var autoSlidingActive = false;
-      var autoSlidingTO;
-      var autoSlidingDelay = 5000; // default autosliding delay value
-      var autoSlidingBlocked = false;
-  
-      var $activeSlide;
-      var $activeControlsBg;
-      var $prevControl;
-  
-      function setIDs() {
-        $slides.forEach(function($slide, index) {
-          $slide.classList.add("fnc-slide-" + (index + 1));
-        });
-  
-        $controls.forEach(function($control, index) {
-          $control.setAttribute("data-slide", index + 1);
-          $control.classList.add("fnc-nav__control-" + (index + 1));
-        });
-  
-        $controlsBgs.forEach(function($bg, index) {
-          $bg.classList.add("fnc-nav__bg-" + (index + 1));
-        });
-      };
-  
-      setIDs();
-  
-      function afterSlidingHandler() {
-        $slider.querySelector(".m--previous-slide").classList.remove("m--active-slide", "m--previous-slide");
-        $slider.querySelector(".m--previous-nav-bg").classList.remove("m--active-nav-bg", "m--previous-nav-bg");
-  
-        $activeSlide.classList.remove("m--before-sliding");
-        $activeControlsBg.classList.remove("m--nav-bg-before");
-        $prevControl.classList.remove("m--prev-control");
-        $prevControl.classList.add("m--reset-progress");
-        var triggerLayout = $prevControl.offsetTop;
-        $prevControl.classList.remove("m--reset-progress");
-  
-        sliding = false;
-        var layoutTrigger = $slider.offsetTop;
-  
-        if (autoSlidingActive && !autoSlidingBlocked) {
-          setAutoslidingTO();
-        }
-      };
-  
-      function performSliding(slideID) {
-        if (sliding) return;
-        sliding = true;
-        window.clearTimeout(autoSlidingTO);
-        curSlide = slideID;
-  
-        $prevControl = $slider.querySelector(".m--active-control");
-        $prevControl.classList.remove("m--active-control");
-        $prevControl.classList.add("m--prev-control");
-        $slider.querySelector(prefix + "nav__control-" + slideID).classList.add("m--active-control");
-  
-        $activeSlide = $slider.querySelector(prefix + "slide-" + slideID);
-        $activeControlsBg = $slider.querySelector(prefix + "nav__bg-" + slideID);
-  
-        $slider.querySelector(".m--active-slide").classList.add("m--previous-slide");
-        $slider.querySelector(".m--active-nav-bg").classList.add("m--previous-nav-bg");
-  
-        $activeSlide.classList.add("m--before-sliding");
-        $activeControlsBg.classList.add("m--nav-bg-before");
-  
-        var layoutTrigger = $activeSlide.offsetTop;
-  
-        $activeSlide.classList.add("m--active-slide");
-        $activeControlsBg.classList.add("m--active-nav-bg");
-  
-        setTimeout(afterSlidingHandler, slidingAT + slidingDelay);
-      };
-  
-  
-  
-      function controlClickHandler() {
-        if (sliding) return;
-        if (this.classList.contains("m--active-control")) return;
-        if (options.blockASafterClick) {
-          autoSlidingBlocked = true;
-          $slider.classList.add("m--autosliding-blocked");
-        }
-  
-        var slideID = +this.getAttribute("data-slide");
-  
-        performSliding(slideID);
-      };
-  
-      $controls.forEach(function($control) {
-        $control.addEventListener("click", controlClickHandler);
-      });
-  
-      function setAutoslidingTO() {
-        window.clearTimeout(autoSlidingTO);
-        var delay = +options.autoSlidingDelay || autoSlidingDelay;
-        curSlide++;
-        if (curSlide > numOfSlides) curSlide = 1;
-  
-        autoSlidingTO = setTimeout(function() {
-          performSliding(curSlide);
-        }, delay);
-      };
-  
-      if (options.autoSliding || +options.autoSlidingDelay > 0) {
-        if (options.autoSliding === false) return;
-        
-        autoSlidingActive = true;
-        setAutoslidingTO();
-        
-        $slider.classList.add("m--with-autosliding");
-        var triggerLayout = $slider.offsetTop;
-        
-        var delay = +options.autoSlidingDelay || autoSlidingDelay;
-        delay += slidingDelay + slidingAT;
-        
-        $progressAS.forEach(function($progress) {
-          $progress.style.transition = "transform " + (delay / 1000) + "s";
-        });
+      if (activePlaceholder) {
+        activePlaceholder.classList.remove('cards-placeholder__item--active');
       }
+  
+      placeholders[this.currentIndex].classList.add('cards-placeholder__item--active');
+  
       
-      $slider.querySelector(".fnc-nav__control:first-child").classList.add("m--active-control");
+    };
+  
+    // mousedown event
+    Slider.prototype.onStart = function (evt) {
+      this.isDragging = true;
+  
+      this.currentX = evt.pageX || evt.touches[0].pageX;
+      this.startX = this.currentX;
+  
+      var card = this.cards[this.currentIndex];
+  
+      // calculate ration to use in parallax effect
+      this.windowWidth = window.innerWidth;
+      this.cardWidth = card.offsetWidth;
+      this.ratio = this.windowWidth / (this.cardWidth / 4);
+    };
+  
+    // mouseup event
+    Slider.prototype.onEnd = function (evt) {
+      this.isDragging = false;
+  
+      var diff = this.startX - this.currentX;
+      var direction = (diff > 0) ? 'left' : 'right';
+      this.startX = 0;
+  
+      if (Math.abs(diff) > this.windowWidth / 4) {
+        if (direction === 'left') {
+          this.slideLeft();
+        } else if (direction === 'right') {
+          this.slideRight();
+        } else {
+          this.cancelMoveCard();
+        }
+  
+      } else {
+        this.cancelMoveCard();
+  
+      }
   
     };
   
-    var fncSlider = function(sliderSelector, options) {
-      var $sliders = $$(sliderSelector);
+    // mousemove event
+    Slider.prototype.onMove = function (evt) {
+      if (!this.isDragging) return;
   
-      $sliders.forEach(function($slider) {
-        _fncSliderInit($slider, options);
+      this.currentX = evt.pageX || evt.touches[0].pageX;
+      var diff = this.startX - this.currentX;
+      diff *= -1;
+  
+      // don't let drag way from the center more than quarter of window
+      if (Math.abs(diff) > this.windowWidth / 4) {
+        if (diff > 0) {
+          diff = this.windowWidth / 4;
+        } else {
+          diff = - this.windowWidth / 4;
+        }
+      }
+  
+      this.moveCard(diff);
+    };
+  
+    // slide to left direction
+    Slider.prototype.slideLeft = function () {
+      // if last don't do nothing
+      if (this.currentIndex === this.cards.length - 1) {
+        this.cancelMoveCard();
+        return;
+      }
+  
+      var self = this;
+      var card = this.cards[this.currentIndex];
+      var cardWidth = this.windowWidth / 2;
+  
+      card.style.left = '-50%';
+  
+      this.resetCardElsPosition();
+  
+      this.currentIndex += 1;
+      this.setActivePlaceholder();
+      card = this.cards[this.currentIndex];
+  
+      card.style.left = '50%';
+  
+      this.moveCardEls(cardWidth * 3);
+  
+      // add delay to resetting position
+      setTimeout(function () {
+        self.resetCardElsPosition();
+      }, 50);
+    };
+  
+    // slide to right direction
+    Slider.prototype.slideRight = function () {
+      // if last don't do nothing
+      if (this.currentIndex === 0) {
+        this.cancelMoveCard();
+        return;
+      }
+  
+      var self = this;
+      var card = this.cards[this.currentIndex];
+      var cardWidth = this.windowWidth / 2;
+  
+      card.style.left = '150%';
+  
+      this.resetCardElsPosition();
+  
+      this.currentIndex -= 1;
+      this.setActivePlaceholder();
+      card = this.cards[this.currentIndex];
+  
+      card.style.left = '50%';
+  
+      this.moveCardEls(-cardWidth * 3);
+  
+      // add delay to resetting position
+      setTimeout(function () {
+        self.resetCardElsPosition();
+      }, 50);
+    };
+  
+    // put active card in original position (center)
+    Slider.prototype.cancelMoveCard = function () {
+      var self = this;
+      var card = this.cards[this.currentIndex];
+  
+      card.style.transition = 'transform 0.5s ease-out';
+      card.style.transform = '';
+  
+      this.resetCardElsPosition();
+    };
+  
+    // reset to original position elements of card
+    Slider.prototype.resetCardElsPosition = function () {
+      var self = this;
+      var card = this.cards[this.currentIndex];
+  
+      var cardLogo = card.querySelector('.card__logo');
+      var cardPrice = card.querySelector('.card__price');
+      var cardTitle = card.querySelector('.card__title');
+      var cardSubtitle = card.querySelector('.card__subtitle');
+      var cardImage = card.querySelector('.card__image');
+      var cardWishList = card.querySelector('.card__wish-list');
+      var cardCategory = card.querySelector('.card__category');
+      var cardWillAnimate = card.querySelectorAll('.card__will-animate');
+  
+      // move card elements to original position
+      cardWillAnimate.forEach(function (el) {
+        el.style.transition = 'transform 0.5s ease-out';
       });
+  
+      cardLogo.style.transform = '';
+      cardPrice.style.transform = '';
+  
+      cardTitle.style.transform = '';
+      cardSubtitle.style.transform = '';
+  
+      cardImage.style.transform = '';
+      cardWishList.style.transform = '';
+      cardCategory.style.transform = '';
+  
+      // clear transitions
+      setTimeout(function () {
+        card.style.transform = '';
+        card.style.transition = '';
+  
+        cardWillAnimate.forEach(function (el) {
+          el.style.transition = '';
+        });
+      }, 500);
+  
     };
   
-    window.fncSlider = fncSlider;
-  }());
+    // slide card while dragging
+    Slider.prototype.moveCard = function (diff) {
   
-  /* not part of the slider scripts */
+      var card = this.cards[this.currentIndex];
   
-  /* Slider initialization
-  options:
-  autoSliding - boolean
-  autoSlidingDelay - delay in ms. If audoSliding is on and no value provided, default value is 5000
-  blockASafterClick - boolean. If user clicked any sliding control, autosliding won't start again
-  */
-  fncSlider(".example-slider", {autoSlidingDelay: 4000});
+      card.style.transform = 'translateX(calc(' + diff + 'px - 50%))';
+      diff *= -1;
   
-  var $demoCont = document.querySelector(".demo-cont");
+      this.moveCardEls(diff);
+    };
   
-  [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function($btn) {
-    $btn.addEventListener("click", function() {
-      $demoCont.classList.toggle("credits-active");
-    });
-  });
+    // create parallax effect on card elements sliding them
+    Slider.prototype.moveCardEls = function (diff) {
+      var card = this.cards[this.currentIndex];
   
-  document.querySelector(".demo-cont__credits-close").addEventListener("click", function() {
-    $demoCont.classList.remove("credits-active");
-  });
+      var cardLogo = card.querySelector('.card__logo');
+      var cardPrice = card.querySelector('.card__price');
+      var cardTitle = card.querySelector('.card__title');
+      var cardSubtitle = card.querySelector('.card__subtitle');
+      var cardImage = card.querySelector('.card__image');
+      var cardWishList = card.querySelector('.card__wish-list');
+      var cardCategory = card.querySelector('.card__category');
+      var cardWillAnimate = card.querySelectorAll('.card__will-animate');
   
-  document.querySelector(".js-activate-global-blending").addEventListener("click", function() {
-    document.querySelector(".example-slider").classList.toggle("m--global-blending-active");
-  });
+      cardLogo.style.transform = 'translateX(' + (diff / this.ratio) + 'px)';
+      cardPrice.style.transform = 'translateX(' + (diff / this.ratio) + 'px)';
+  
+      cardTitle.style.transform = 'translateX(' + (diff / (this.ratio * 0.90)) + 'px)';
+      cardSubtitle.style.transform = 'translateX(' + (diff / (this.ratio * 0.85)) + 'px)';
+  
+      cardImage.style.transform = 'translateX(' + (diff / (this.ratio * 0.35)) + 'px)';
+  
+      cardWishList.style.transform = 'translateX(' + (diff / (this.ratio * 0.85)) + 'px)';
+      cardCategory.style.transform = 'translateX(' + (diff / (this.ratio * 0.65)) + 'px)';
+  
+    };
+  
+  
+    // create slider
+    var slider = new Slider();
+  
+  })();
+  
