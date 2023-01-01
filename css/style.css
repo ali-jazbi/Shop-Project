@@ -332,9 +332,8 @@ header .pc-navbar{
   }
 
   /* offcanvas menu */
-  .offcanvas-menu{
-    /* height:30px; */
-    background-color: #F9F9F9;
+  .navbar-md-bottom{
+    
   }
 /* *-----------------END------------------- */
 
@@ -427,14 +426,14 @@ header .pc-navbar{
 /* NOTE Crad Banner */
 
 .card-banner{
-  width:350px;
-  height:430px;
+  width:320px;
+  height:410px;
   background-color:white;
   box-shadow: 0px 10px 10px rgb(228, 228, 228);
 }
 .card-banner img{
-  width:303px;
-  height:313px;
+  width:283px;
+  height:293px;
 }
 .card-banner .card-title{
   font-size:1.513rem
@@ -448,13 +447,13 @@ header .pc-navbar{
 }
 .card-banner .image-4 figure{
   background-color:#F2FAFB;
-  height:140px;
+  height:120px;
   color:black;
 }
 .card-banner .img-inside{
-  width:130px;
+  width:110px;
   background-color:#F2FAFB;
-  height:100px;
+  height:90px;
 }
 .card-banner .card-footer a{
   transition:0.1s all ease-in-out;
