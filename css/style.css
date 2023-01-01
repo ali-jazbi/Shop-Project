@@ -349,7 +349,7 @@ header .pc-navbar{
 }
 .txt-rotate{
   color:grey;
-  font-size:40px;
+  font-size:2.5rem;
 }
 .banner img{
   width: 500px;
@@ -360,10 +360,16 @@ header .pc-navbar{
 @media (max-width: 991px) {
   .banner{
     margin-top: 120px;
-    height:780px
+    height:880px
   }
   .banner .block h1, .banner .block .h1 {
     font-size: 46px;
+  }
+  .txt-rotate{
+    font-size:1.9rem;
+  }
+  .middle .h1{
+    font-size:2.05rem !important;
   }
 }
 @media (max-width: 767px) {
