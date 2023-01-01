@@ -366,10 +366,10 @@ header .pc-navbar{
     font-size: 46px;
   }
   .txt-rotate{
-    font-size:1.9rem;
+    font-size:1.7rem;
   }
   .middle .h1{
-    font-size:2.05rem !important;
+    font-size:1.85rem !important;
   }
 }
 @media (max-width: 767px) {
@@ -400,7 +400,7 @@ header .pc-navbar{
     box-shadow: none !important;
   }
   .btn-banner{
-    width: 35%;
+    width: 45%;
   }
   #btn-back-to-top{
     background-color: #4a9fb75d;
