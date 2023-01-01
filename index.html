@@ -201,25 +201,41 @@
                 </div>
                 </div>
               </nav>
-              <div class="navbar-md-bottom">
-              <div
-                  onclick="openNav()"
-                  style="
-                    font-size: 20px;
-                    margin: 20px 0 0 20px;
-                    cursor: pointer;
-                    display: inline-block;
-                  "
-                >
-                   Open
-                </div>
+
+              <!-- SECTION  offcanvas navbar on computer-->
+              <div class="navbar-md-bottom d-none d-md-flex align-items-center">
+                <div class="container-fluid w-100 d-flex justify-content-between">
+                <ul class="nav ms-3">
+                  <li class="nav-item d-flex me-2">
+                    <button onclick="openNav()"><i class="bi bi-list"></i></button>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">پیشنهاد ویژه<i class="bi bi-stars ms-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">خدمات مشتریان<i class="bi bi-person-heart ms-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">گیفت کارت<i class="bi bi-gift-fill ms-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">خرید<i class="bi bi-bag-fill ms-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">فروش<i class="bi bi-wallet-fill ms-1"></i></a>
+                  </li>
+                </ul>
+                <li class="nav-item me-3">
+                  <a class="nav-link" href="#">انتخاب شهر<i class="bi bi-geo-alt-fill ms-1"></i></a>
+                </li>
               </div>
-              <div dir="rtl" class="offcanvas-menu w-100 d-none d-md-block">
+              </div>
+              <div class="offcanvas-menu w-100 d-none d-md-block">
                 <div id="overlay" onclick="closeNav()"></div>
                 <div id="closeBtn" onclick="closeNav()">&times;</div>
                 <div class="sidenav" id="mySidenav">
                   <div class="sidenavHeader">
-                    <i class="fas fa-user-circle"></i> Hello, Sign In
+                    <i class="fas fa-user-circle me-2"></i>ورود
                   </div>
                   <!--Below SideNavHeader-->
                   <div id="main-container">
@@ -232,66 +248,66 @@
                     <a href="#" onclick="openPrimeVideo()"
                       ><div class="sidenavRow">
                         <div>Prime Video</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#" onclick="openAmazonMusic()"
                       ><div class="sidenavRow">
                         <div>Amazon Music</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#"
                       ><div class="sidenavRow">
                         <div>Apps for Android</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#"
                       ><div class="sidenavRow">
                         <div>Echo, Alexa & Smart Home</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#"
                       ><div class="sidenavRow">
                         <div>Fire TV</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#"
                       ><div class="sidenavRow">
                         <div>Fire Tablets</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#"
                       ><div class="sidenavRow">
                         <div>Kindle E-readers & Books</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#"
                       ><div class="sidenavRow">
                         <div>Audible Audiobooks</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <hr />
                     <div class="sidenavContentHeader">Shop By Department</div>
                     <a href="#"
                       ><div class="sidenavRow">
                         <div>Amazon Fresh</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i></div
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
                     ></a>
                     <a href="#">
                       <div class="sidenavRow">
                         <div>Books</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                       </div>
                     </a>
                     <a href="#">
                       <div class="sidenavRow">
                         <div>Films, TV, Music & Games</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                       </div>
                     </a>
                     <a href="#">
                       <div class="sidenavRow">
                         <div>Electronics & Computers</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                       </div>
                     </a>
                     <div class="sidenavContainer" id="firstContainer">
@@ -299,49 +315,49 @@
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Home, Garden, Pets & DIY</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Toys, Children & Baby</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Clothes, Shoes, Jewellery & Accessories</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Sports & Outdoors</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Food & Grocery</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Health & Beauty</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Car & Motorbike</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Business, Industry & Science</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                     </div>
@@ -362,25 +378,25 @@
                     <a href="#">
                       <div class="sidenavRow">
                         <div>Gift Cards & Top Up</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                       </div>
                     </a>
                     <a href="#">
                       <div class="sidenavRow">
                         <div>Find a Gift</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                       </div>
                     </a>
                     <a href="#">
                       <div class="sidenavRow">
                         <div>Handmade</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                       </div>
                     </a>
                     <a href="#">
                       <div class="sidenavRow">
                         <div>Amazon Launchpad</div>
-                        <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                       </div>
                     </a>
                     <!--Beginning of second sidenavContainer-->
@@ -392,7 +408,7 @@
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Home Services</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
@@ -401,7 +417,7 @@
                       <a href="#">
                         <div class="sidenavRow">
                           <div>Amazon Business</div>
-                          <i class="fas fa-chevron-right" style="color: #8e9090"></i>
+                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
                         </div>
                       </a>
                       <a href="#">
@@ -443,6 +459,7 @@
                 </div>
               </div>
               
+              
               <!-- SECTION HomePage Banner -->
               
               <section class="banner bg-tertiary position-relative overflow-hidden">
@@ -477,7 +494,7 @@
                 </div>
               </section>
         </header>
-        <!-- Card group-->
+        <!-- SECTION Card Banner group-->
         <div class="multi-card container-fluid">
           <div class="row">
               <div class="col col-md-3 mb-4" data-aos="fade-left" data-aos-duration="500">
