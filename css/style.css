@@ -690,58 +690,13 @@ header .pc-navbar{
   color:white;
 
 }
-.footer-main .back-top{
-  width:100%;
-  height:3rem;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  padding: 12px 24px;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  position: relative;
-  overflow: hidden;
-  font-size:0.913rem ;
-  background-color:#37475A;
-  color: rgb(255, 255, 255);
-  z-index: 9999999;
-
-}
 .footer-main a{
   text-decoration: none;
-}
-@media (max-width: 768px){
-  .footer-main .back-top{
-    height:2rem;
-    font-size:0.813rem ;
-    z-index: 0;
-  }
-}
-.footer-main button:hover {
-  color: rgb(220, 217, 217);
-}
-.footer-main button:after {
-  content: "";
-  background: #515a8a;
-  position: absolute;
-  z-index: -1;
-  left: -20%;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  transform: skewX(-45deg) scale(0, 1);
-  transition: all 0.5s;
-} 
-.footer-main button:hover:after {
-  transform: skewX(-45deg) scale(1, 1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 .footer-main .footer-top{
   width:100%;
   height:auto;
-  padding: 70px 0 10px;
+  padding: 45px 0 7px;
 }
 .footer-main .footer-top h3{
   font-size: 1.563rem;
@@ -778,6 +733,17 @@ header .pc-navbar{
   color:white
 }
 
+@media (max-width: 991px){
+  .footer-main .footer-top h3{
+    font-size: 1.3rem;
+  }
+  .footer-main .footer-top ul li a{
+    font-size: 1rem;
+  }
+  .footer-main .footer-top{
+    height:570px
+  }
+}
 .footer-main .footer-bottom{
   width: 100%;
   height:auto;
