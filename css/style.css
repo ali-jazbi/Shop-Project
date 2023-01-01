@@ -362,14 +362,17 @@ header .pc-navbar{
     margin-top: 120px;
     height:880px
   }
+  .banner button{
+    justify-content: center;
+  }
   .banner .block h1, .banner .block .h1 {
     font-size: 46px;
   }
   .txt-rotate{
-    font-size:1.7rem;
+    font-size:1.8rem;
   }
   .middle .h1{
-    font-size:1.85rem !important;
+    font-size:1.95rem !important;
   }
 }
 @media (max-width: 767px) {
@@ -379,7 +382,10 @@ header .pc-navbar{
 }
 .btn-banner , .main-btn{
   width: 25%;
-  height:45px;
+  height:40px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 0, 0, 0);
   font-size: 1.2rem;
   background: linear-gradient(170deg,#4ea8b9 25%,#2a5caa 180%);
@@ -400,7 +406,7 @@ header .pc-navbar{
     box-shadow: none !important;
   }
   .btn-banner{
-    width: 45%;
+    width: 42%;
   }
   #btn-back-to-top{
     background-color: #4a9fb75d;
