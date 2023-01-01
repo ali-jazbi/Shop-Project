@@ -1,15 +1,4 @@
-/*!
- * Mmenu Light
- * mmenujs.com/mmenu-light
- *
- * Copyright (c) Fred Heusschen
- * www.frebsite.nl
- *
- * License: CC-BY-4.0
- * http://creativecommons.org/licenses/by/4.0/
- *
- */
- :root{
+:root{
     --mm-ocd-width:80%;
     --mm-ocd-min-width:200px;
     --mm-ocd-max-width:440px;
@@ -189,12 +178,12 @@ body.mm-ocd-opened{
 .mm-spn a, .mm-spn span{
     position:relative;
     z-index:1;
-    font-size: 16px;
+    font-size: 17px;
     padding:calc((var(--mm-spn-item-height) - var(--mm-spn-line-height))/ 2) var(--mm-spn-item-indent)
 }
 .mm-spn a{
     background:inherit;
-    color:inherit;
+    color:black;
     text-decoration:none
 }
 .mm-spn a:not(:last-child){
@@ -352,4 +341,15 @@ body.mm-ocd-opened{
     box-shadow: 0 !important;
     border: 0 !important;
     outline: 0 !important;
+}
+.first-child-li li a , .first-child-li li span{
+    font-size: 15px;
+    color:rgb(79, 79, 79)
+}
+.first-child-li .gradient{
+    background: radial-gradient(ellipse farthest-side at top center, rgba(0, 0, 0, 0.025), transparent);
+}
+.second-child-li li a , .second-child-li li span{
+    font-size: 13px;
+    color:rgb(91, 91, 91)
 }

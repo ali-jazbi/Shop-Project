@@ -331,6 +331,11 @@ header .pc-navbar{
     color: rgb(5, 0, 0) !important;
   }
 
+  /* offcanvas menu */
+  .offcanvas-menu{
+    /* height:30px; */
+    background-color: #F9F9F9;
+  }
 /* *-----------------END------------------- */
 
 
