@@ -397,7 +397,7 @@ header .pc-navbar{
   margin-top: 20px;
 }
 .banner .block h1, .banner .block .h1 {
-  font-size: 52px;
+  font-size: 47px;
 }
 @media (max-width: 991px) {
   .banner{
@@ -465,6 +465,15 @@ header .pc-navbar{
     background-color: #1e6275;
 }
 }
+/* *-----------------END------------------- */
+
+
+/* NOTE Mobile Slider */
+  .mobile-slider{
+    width: 100%;
+    height:200px;
+    background-color: red;
+  }
 /* *-----------------END------------------- */
 
 
