@@ -135,21 +135,6 @@ body {
 }
 /* *-----------------END------------------- */
 
-
-/* NOTE Appear Animation */
-.appear{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-  
-  .appear.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
-/* *-----------------END------------------- */
-
 /* NOTE Navbar */
 header .pc-navbar{
     width: 100%;
@@ -416,7 +401,7 @@ header .pc-navbar{
 .banner .block h1, .banner .block .h1 {
   font-size: 47px;
 }
-@media (max-width: 991px) {
+@media (max-width: 762px) {
   .banner{
     margin-top: 120px;
     height: auto;
