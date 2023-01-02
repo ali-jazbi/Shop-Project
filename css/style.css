@@ -422,7 +422,7 @@ header .pc-navbar{
     font-size: 38px;
   }
 }
-@media (min-width:768px){
+@media (min-width:768px) and (max-width:992px){
   .banner{
     margin-top: 50px;
     height: auto;
@@ -507,7 +507,7 @@ header .pc-navbar{
   color:rgb(209, 19, 19);
 }
 
-@media (min-width: 762px){
+@media (min-width: 768px) and (max-width:992px){
   .card-banner{
     width:240px;
     height:340px;
@@ -666,7 +666,7 @@ header .pc-navbar{
   fill: currentColor;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px)  and (max-width:992px){
   .plan-card{
     width: 14rem;
   }
@@ -814,7 +814,7 @@ header .pc-navbar{
 .footer-main .footer-top ul li a:hover{
   color:white
 }
-@media (min-width: 762px){
+@media (min-width: 762px) and (max-width:992px){
   .footer-main{
     margin-top:10px !important; 
   }
