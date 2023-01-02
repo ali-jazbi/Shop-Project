@@ -11,6 +11,8 @@
         <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="./plugins/Bootstrap/css/bootstrap.rtl.min.css">
+        <!-- Slider Card -->
+        <link rel="stylesheet" href="./plugins/slider/dist/css/uikit-rtl.min.css" />
         <!-- fade animation style -->
         <link href="./plugins/aos/aos.css" rel="stylesheet">
         <!-- Bootstrap Icon -->
@@ -495,11 +497,113 @@
 
 
               <!-- SECTION Mobile Card Slider -->
-              <section class="mobile-slider">
-                  
+              <section class="mobile-slider d-md-none">
+                <div uk-slider="center: true" >
+
+                  <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1">
+              
+                      <ul class="uk-slider-items uk-grid">
+                          <li>
+                            <div class="uk-panel">
+                              <div class="box-container">
+                                <div class="card">
+                                      <div class="social">
+                                        <a href="" class="uk-icon-link" uk-icon="twitter" ></a>
+                                        <a href="" class="uk-icon-link" uk-icon="facebook"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="instagram"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="whatsapp"></a>
+                                      </div>
+                                      <div
+                                          class="pic"><img src="./images/bike.jpg" alt="profile-picture" title="Someone Famous" />
+                                      </div>
+                                </div>
+                              </div>
+                          </div>
+                          </li>
+                          <li>
+                            <div class="uk-panel">
+                              <div class="box-container">
+                                <div class="card">
+                                      <div class="social">
+                                        <a href="" class="uk-icon-link" uk-icon="twitter" ></a>
+                                        <a href="" class="uk-icon-link" uk-icon="facebook"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="instagram"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="whatsapp"></a>
+                                      </div>
+                                      <div
+                                          class="pic"><img src="./images/woman.jpg" alt="profile-picture" title="Someone Famous" />
+                                      </div>
+                                </div>
+                              </div>
+                          </div>
+                          </li>
+                          <li>
+                            <div class="uk-panel">
+                              <div class="box-container">
+                                <div class="card">
+                                      <div class="social">
+                                        <a href="" class="uk-icon-link" uk-icon="twitter" ></a>
+                                        <a href="" class="uk-icon-link" uk-icon="facebook"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="instagram"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="whatsapp"></a>
+                                      </div>
+                                      <div
+                                          class="pic"><img src="./images/beauty-sm.jpg" alt="profile-picture" title="Someone Famous" />
+                                      </div>
+                                </div>
+                              </div>
+                          </div>
+                          </li>
+                          <li>
+                              <div class="uk-panel">
+                                  <div class="box-container">
+                                    <div class="card">
+                                          <div class="social">
+                                            <a href="" class="uk-icon-link" uk-icon="twitter" ></a>
+                                            <a href="" class="uk-icon-link" uk-icon="facebook"></a>
+                                            <a href="" class="uk-icon-link" uk-icon="instagram"></a>
+                                            <a href="" class="uk-icon-link" uk-icon="whatsapp"></a>
+                                          </div>
+                                          <div
+                                              class="pic"><img src="./images/laptop-sm.jpg" alt="profile-picture" title="Someone Famous" />
+                                          </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                            <div class="uk-panel">
+                              <div class="box-container">
+                                <div class="card">
+                                      <div class="social">
+                                        <a href="" class="uk-icon-link" uk-icon="twitter" ></a>
+                                        <a href="" class="uk-icon-link" uk-icon="facebook"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="instagram"></a>
+                                        <a href="" class="uk-icon-link" uk-icon="whatsapp"></a>
+                                      </div>
+                                      <div
+                                          class="pic"><img src="./images/vr.jpg" alt="profile-picture" title="Someone Famous" />
+                                      </div>
+                                </div>
+                              </div>
+                          </div>
+                          </li>
+                      </ul>
+              
+                      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+              
+                  </div>
+              
+                  <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-large-top">
+                    
+                  </ul>
+              
+                </div>
               </section>
         </header>
         <!-- SECTION Card Banner group-->
+        <div class="divider div-transparent pt-5 div-dot pb-5"></div>
         <div class="multi-card container-fluid">
           <div class="row d-flex justify-content-around">
               <div class="col col-sm-3 col-md-4 col-lg-3 mb-4" data-aos="fade-left" data-aos-duration="500">
@@ -1236,11 +1340,13 @@
 
 
 
-
         <!-- Bootstrap Bundle with Popper -->
         <script src="./plugins/Bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- Jquery Plugin -->
         <script src="./plugins/jquery/jquery.min.js"></script>
+        <!-- Card Slider Plugin-->
+        <script src="./plugins/slider/dist/js/uikit.min.js"></script>
+        <script src="./plugins/slider/dist/js/uikit-icons.min.js"></script>
         <!-- fade animation plugin -->
         <script src="./node_modules/hero-slider/dist/HeroSlider.js"></script>
         <script src="./plugins/aos/aos.js"></script>
@@ -1257,6 +1363,7 @@
         <script src="./js/header.js"></script>
         <script src="./js/typing.js"></script>
         <script src="./js/md-menu-all.js"></script>
+        <script src="./js/card-slider.js"></script>
         <script>
           var menu = new MmenuLight(document.querySelector("#menu"), "all");
             var navigator = menu.navigation({
