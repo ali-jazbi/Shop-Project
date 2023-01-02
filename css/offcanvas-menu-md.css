@@ -52,10 +52,10 @@
   }
   
   .offcanvas-menu hr {
-    height: 1px;
+    height: 5px;
     border: 0;
-    color: gray;
-    background-color: gray;
+    color: rgb(105, 105, 105);
+    background-color: rgb(68, 68, 68);
     margin: 15px auto 10px auto;
   }
   

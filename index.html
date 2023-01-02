@@ -20,7 +20,6 @@
         <!-- customized Style -->
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/menu-sm.css">
-        <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/offcanvas-menu-md.css">
         
         <title>Online Shop</title>
@@ -52,8 +51,9 @@
             <div id="navbar-sm" class="header fixed-top d-md-none w-100 d-flex align-items-center justify-content-center flex-column">
               <div style="height:3.525rem;" class="row w-100 d-flex justify-content-around align-items-center">
                 <div class="top-nav w-50 d-flex">
-                  <a class="navbar-brand" href="#menu">
-                    <i style="font-size:30px;" class="bi bi-list"></i>
+                  <a class="navbar-brand">
+                    <button onclick="openNav()"> <i style="font-size:30px;" class="bi bi-list"></i>
+                    </button>
                   </a>
                   <a class="navbar-brand ps-3" href="#">
                     <img src="./images/amazon.svg" width="60" height="35">
@@ -68,50 +68,7 @@
                     </a>
                   </div>
               </div>
-              <nav id="menu">
-               <div style="height:50px" class="row w-100 d-flex align-items-center justify-content-end">
-                <button class="btn btn-close close-btn" onclick="closenav()"></button>
-               </div>
-                  <ul>
-                   
-                      <li class="Selected"><a href="#/">خانه</a></li>
-                      <div class="gradient"></div>
-                      <li>
-                          <span>پروژه ها</span>
-                          <div class="gradient"></div>
-                          <ul class="first-child-li">
-                              <li><a href="#/">استاتیک</a></li>
-                              <div class="gradient"></div>
-                              <li>
-                                  <span>بوت استرپ</span>
-                                  <div class="gradient"></div>
-                                  <ul class="second-child-li">
-                                      <li>
-                                          <a href="#/">آزمایشی</a>
-                                      </li>
-                                      <div class="gradient"></div>
-                                      <li>
-                                          <a href="#/">رایگان</a>
-                                      </li>
-                                      <div class="gradient"></div>
-                                      <li>
-                                          <a href="#/">ویژه</a>
-                                      </li>
-                                      <div class="gradient"></div>
-                                  </ul>
-                              </li>
-                              <li>
-                                  <a href="#/">جی کوئری</a>
-                              </li>
-                              <div class="gradient"></div>
-                          </ul>
-                      </li>
-                      <li><a href="#/">درباره ما</a></li>
-                      <div class="gradient"></div>
-                      <li><a href="#/">ارتباط با ما</a></li>
-                      <div class="gradient"></div>
-                  </ul>
-              </nav>
+              
               <form id="search-sm" class="form border mt-2">
                 <div class="dropdown me-3">
                   <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -252,7 +209,7 @@
                 </li>
               </div>
               </div>
-              <div class="offcanvas-menu w-100 d-none d-md-block">
+              <div class="offcanvas-menu w-100">
                 <div id="overlay" onclick="closeNav()"></div>
                 <div id="closeBtn" onclick="closeNav()">&times;</div>
                 <div class="sidenav" id="mySidenav">
@@ -877,6 +834,7 @@
             </div>
           </div>
         </section>
+        
 
         <!-- SECTION Products Cards -->
         <div class="divider div-transparent div-dot"></div>
@@ -1299,7 +1257,6 @@
         <!-- main script -->
         <script src="./js/script.js"></script>
         <script src="./js/menu.js"></script>
-        <script src="./js/header.js"></script>
         <script src="./js/typing.js"></script>
         <script src="./js/md-menu-all.js"></script>
         <script src="./js/card-slider.js"></script>
