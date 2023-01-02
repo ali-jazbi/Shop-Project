@@ -454,7 +454,9 @@ header .pc-navbar{
     box-shadow: none !important;
   }
   .btn-banner{
-    width: 42%;
+    width: 130px;
+    font-size: 1rem;
+
   }
   #btn-back-to-top{
     background-color: #4a9fb75d;
