@@ -171,6 +171,7 @@ header .pc-navbar{
 }
 #navbar-sm button{
   background-color: transparent;
+  color:black !important;
 }
 .pc-navbar .li-style{
     padding:0.5rem;
