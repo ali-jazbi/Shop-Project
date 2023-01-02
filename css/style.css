@@ -422,6 +422,12 @@ header .pc-navbar{
     font-size: 38px;
   }
 }
+@media (min-width:768px){
+  .banner{
+    margin-top: 50px;
+    height: auto;
+  }
+}
 .btn-banner , .main-btn{
   width: 140px;
   height:40px;
@@ -541,14 +547,7 @@ header .pc-navbar{
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.247);
   font-family: "Poppins", sans-serif;
 }
-@media (min-width: 768px) {
-  .plan-card{
-    width: 14rem;
-  }
-  .etiquet-price{
-    width: 12.46rem !important;
-  }
-}
+
 .plan-card h2 {
   margin-bottom: 15px;
   font-size: 27px;
@@ -665,6 +664,14 @@ header .pc-navbar{
   fill: currentColor;
 }
 
+@media (min-width: 768px) {
+  .plan-card{
+    width: 14rem;
+  }
+  .etiquet-price{
+    width: 12.46rem !important;
+  }
+}
 /* *-----------------END------------------- */
 
 
@@ -679,20 +686,6 @@ header .pc-navbar{
   transition:.2s all ease-in-out;
   --hover: #9e9c9c;
 }
-@media (min-width: 768px) {
-.products .product-card .card:hover{
-  cursor: pointer;
-  box-shadow: 0 1.5em 1.5em -1.4em var(--hover);
-  transform: translateY(-0.25em);
-}
-}
-@media (max-width: 768px) {
-  .products .product-card .card:active{
-    cursor: pointer;
-    box-shadow: 0 1.5em 1.5em -1.4em var(--hover);
-    transform: translateY(-0.25em);
-  }
-}
 .products .main-btn{
   display:flex;
   align-items:center;
@@ -701,6 +694,20 @@ header .pc-navbar{
   height:52px;
   font-size: 20px;
 }
+@media (min-width: 768px) {
+  .products .product-card .card:hover{
+    cursor: pointer;
+    box-shadow: 0 1.5em 1.5em -1.4em var(--hover);
+    transform: translateY(-0.25em);
+  }
+  }
+  @media (max-width: 768px) {
+    .products .product-card .card:active{
+      cursor: pointer;
+      box-shadow: 0 1.5em 1.5em -1.4em var(--hover);
+      transform: translateY(-0.25em);
+    }
+  }
 /* *-----------------END------------------- */
 
 
@@ -805,7 +812,17 @@ header .pc-navbar{
 .footer-main .footer-top ul li a:hover{
   color:white
 }
-
+@media (min-width: 762px){
+  .footer-main{
+    margin-top:10px !important; 
+  }
+  .footer-main .footer-top{
+    height: auto !important;
+  }
+  .footer-main .footer-bottom .footer_copyrightText p{
+    font-size: 12px !important;
+  }
+}
 @media (max-width: 991px){
   .footer-main .footer-top h3{
     font-size: 1.3rem;
