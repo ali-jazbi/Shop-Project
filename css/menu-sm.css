@@ -160,8 +160,8 @@ body.mm-ocd-opened{
     top:calc(var(--mm-spn-item-height)/ 2);
     left:calc(var(--mm-spn-item-height)/ 2);
     z-index:0;
-    width:10px;
-    height:10px;
+    width:7px;
+    height:7px;
     border-top:2px solid;
     border-right:2px solid;
     -webkit-transform:rotate(230deg) translate(0,-50%);
@@ -178,7 +178,7 @@ body.mm-ocd-opened{
 .mm-spn a, .mm-spn span{
     position:relative;
     z-index:1;
-    font-size: 17px;
+    font-size: 14px;
     padding:calc((var(--mm-spn-item-height) - var(--mm-spn-line-height))/ 2) var(--mm-spn-item-indent)
 }
 .mm-spn a{
@@ -309,7 +309,7 @@ body.mm-ocd-opened{
 	height: 20px;
 	position: relative;
 	width: 100%;
-	background: radial-gradient(ellipse farthest-side at top center, rgba(0,0,0,0.08), transparent);
+	background: radial-gradient(ellipse farthest-side at top center, rgba(0, 0, 0, 0), transparent);
 }
 .gradient:before {
 	content: "";
@@ -319,7 +319,7 @@ body.mm-ocd-opened{
 	right: 0;
 	left: 0;
 	height: 3px;
-	background: linear-gradient(left, transparent, rgba(0,0,0,0.02), rgba(0,0,0,0.02), transparent);
+	background: linear-gradient(left, transparent, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), transparent);
 }
 #navbar-sm .form{
     width: 100%;
@@ -343,13 +343,13 @@ body.mm-ocd-opened{
     outline: 0 !important;
 }
 .first-child-li li a , .first-child-li li span{
-    font-size: 15px;
+    font-size: 13px;
     color:rgb(79, 79, 79)
 }
 .first-child-li .gradient{
-    background: radial-gradient(ellipse farthest-side at top center, rgba(0, 0, 0, 0.025), transparent);
+    background: radial-gradient(ellipse farthest-side at top center, rgba(0, 0, 0, 0), transparent);
 }
 .second-child-li li a , .second-child-li li span{
-    font-size: 13px;
+    font-size: 12px;
     color:rgb(91, 91, 91)
 }
