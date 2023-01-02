@@ -327,6 +327,12 @@ header .pc-navbar{
     width: 17px;
     margin-top: 3px;
   }
+
+  #search-sm .dropdown .dropdown-menu{
+    width:100%;
+    background: rgb(255, 255, 255);
+    border-left: 3px solid #4A9FB7
+  }
   .navbar-nav li a {
     color: rgb(5, 0, 0) !important;
   }
