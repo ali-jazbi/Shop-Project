@@ -75,7 +75,8 @@
   }
   @media (max-width:760px){
     #closeBtn{
-      margin-right: 330px;
+      margin-right: 274px;
+      z-index: 999999999;
     }
   }
   .offcanvas-menu a,
