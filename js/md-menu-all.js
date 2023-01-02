@@ -10,6 +10,7 @@ function openNav() {
 
 }
 function closeNav() {
+    document.body.style.overflowY="scroll";
     document.getElementById("mySidenav").style.animation = "collapse 0.3s forwards";
     //closeBtn
     document.getElementById("closeBtn").style.animation = "hide 0.3s";
