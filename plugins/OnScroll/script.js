@@ -4,7 +4,8 @@ let nav=document.getElementById("navbar");
 let dropdown=document.getElementById("dropdown")
 let navSM=document.getElementById("navbar-sm");
 let searchSM=document.getElementById("search-sm");
-let btnFooter=document.getElementById("btn-footer")
+let btnFooter=document.getElementById("btn-footer");
+let vertical_ul=document.getElementById("vertical-ul-sm");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
@@ -16,10 +17,12 @@ function scrollFunction() {
     {
       navSM.style.boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)";
       searchSM.style.display="none";
+      vertical_ul.style.display="none"
     }
     else{
       searchSM.style.display="flex";
       navSM.style.boxShadow="0 0 0 rgba(0, 0, 0, 0.1)"
+      vertical_ul.style.display="block"
     }
   if (document.body.scrollTop > 380 ||
     document.documentElement.scrollTop > 380) 
