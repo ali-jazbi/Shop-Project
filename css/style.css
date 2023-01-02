@@ -471,6 +471,10 @@ header .pc-navbar{
 /* NOTE Mobile Slider */
   .mobile-slider{
     width: 100%;
+    direction: ltr;
+  }
+  .box-container{
+    width: 100%;
   }
   .box-container .card {
     position: relative;
