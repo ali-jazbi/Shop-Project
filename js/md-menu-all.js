@@ -1,4 +1,5 @@
 function openNav() {
+    document.body.style.overflowY="hidden";
     document.getElementById("mySidenav").style.animation = "expand 0.3s forwards";
     //closeBtn
     document.getElementById("closeBtn").style.display = "block";
@@ -8,7 +9,6 @@ function openNav() {
     document.getElementById("overlay").style.animation = "show 0.3s";
 
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.animation = "collapse 0.3s forwards";
     //closeBtn
