@@ -333,6 +333,16 @@ header .pc-navbar{
     background: rgb(255, 255, 255);
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.155);
   }
+  #search-sm .dropdown .dropdown-toggle{
+    display: flex;
+    height:100%;
+    align-items:center;
+  }
+  #search-sm .dropdown .dropdown-toggle:hover , #search-sm .dropdown .dropdown-toggle:active , #search-sm .dropdown .dropdown-toggle:focus{
+    border: 0 !important;
+    outline:0 !important;
+    box-shadow: 0 !important;
+  }
   .navbar-nav li a {
     color: rgb(5, 0, 0) !important;
   }
