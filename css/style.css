@@ -642,6 +642,30 @@ header .pc-navbar{
   
 /* *-----------------END------------------- */
 
+/* NOTE Sign-in ONLY in SM */
+.sign{
+  width:100%;
+  height:150px;
+  background-color: transparent;
+  margin: 20px 0 70px 0;
+}
+.sign button{
+  background-color:#FFD814;
+  width:95%;
+  color: rgba(0, 0, 0, 0.523);
+  height: 50px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 9px rgba(115, 115, 115, 0.126);
+}
+.sign a{
+  color:#4A9FB7
+}
+.hr-sign{
+    height: 6px;
+    background-color: rgb(68, 68, 68);
+}
+/* *-----------------END------------------- */
 
 /* NOTE Crad Banner */
 .card-banner{
@@ -737,7 +761,7 @@ header .pc-navbar{
   border-radius: 10px;
   border-bottom: 4px solid #2c5f6d;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.247);
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .plan-card h2 {
