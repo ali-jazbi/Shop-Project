@@ -54,7 +54,7 @@
                 <div class="top-nav w-50 d-flex">
                   <a class="navbar-brand">
                     <button onclick="openNav()"> <i style="font-size:30px;color:black !important" class="bi bi-list"></i>
-                      <div id="closeBtn" onclick="closeNav()">&times;</div>
+                      <div id="closeBtn" class="d-none d-md-block" onclick="closeNav()">&times;</div>
                     </button>
                   </a>
                   <a class="navbar-brand ps-3" href="#">
@@ -226,10 +226,10 @@
               </div>
               <div class="offcanvas-menu w-100">
                 <div id="overlay" onclick="closeNav()"></div>
-                <div id="closeBtn" onclick="closeNav()">&times;</div>
                 <div class="sidenav" id="mySidenav">
-                  <div class="sidenavHeader">
-                    <i class="fas fa-user-circle me-2"></i>ورود
+                  <div class="sidenavHeader d-flex justify-content-between w-100">
+                    <i class="fas fa-user-circle me-2"><span Class="ps-2">ورود</span></i>
+                    <i style="cursor:pointer" onclick="closeNav()" class="bi bi-x-lg"></i>
                   </div>
                   <!--Below SideNavHeader-->
                   <div id="main-container">
@@ -1256,7 +1256,7 @@
         <script src="./node_modules/hero-slider/dist/HeroSlider.js"></script>
         <script src="./plugins/aos/aos.js"></script>
         <!-- FontAwesome -->
-        <script src="https://kit.fontawesome.com/15785cd1e7.js" crossorigin="anonymous"></script>
+        <script src="./plugins/fontawesome/icon.js" crossorigin="anonymous"></script>
         <script>
           AOS.init();
         </script>

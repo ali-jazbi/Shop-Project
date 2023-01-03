@@ -69,15 +69,9 @@
     color: white;
     font-size: 50px;
     cursor: pointer;
-    z-index: 999999;
+    z-index: 9999999;
     transform: translateY(-5px);
     transition: visibility 0.5s;
-  }
-  @media (max-width:760px){
-    #closeBtn{
-      margin-right: 254px;
-      z-index: 999999999;
-    }
   }
   .offcanvas-menu a,
   .offcanvas-menu a:link,
