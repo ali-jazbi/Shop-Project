@@ -1,7 +1,6 @@
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 let nav=document.getElementById("navbar");
-let dropdown=document.getElementById("dropdown")
 let navSM=document.getElementById("navbar-sm");
 let searchSM=document.getElementById("search-sm");
 let btnFooter=document.getElementById("btn-footer");
