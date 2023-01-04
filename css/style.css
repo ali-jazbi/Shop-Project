@@ -201,7 +201,8 @@ header .pc-navbar{
 
 .pc-navbar ul li a:hover::before {
   transform-origin: center;
-  transform: scaleX(1);  color:#4A9FB7 !important;
+  transform: scaleX(1); 
+  color:#4A9FB7 !important;
 }
 .dropdown-style{
     position: absolute;
