@@ -155,6 +155,23 @@ header .pc-navbar{
   background-color: transparent;
   color:black !important;
 }
+
+.header{
+	background: #ffffff;
+    color:black;
+	width: 100%;
+	padding: 0 10px;
+}
+#navbar-sm .form{
+    width: 100%;
+    border-radius:0;
+    box-shadow: none;
+    background-color:white;
+    border-radius: 3px;
+  }
+  #navbar-sm .form:focus-within{
+    border-radius: 10px 10px 0 0 !important;
+  }
 .pc-navbar .li-style{
   padding:0 0.5rem;
 }
@@ -1116,7 +1133,8 @@ header .pc-navbar{
     font-size: 1rem;
   }
   .footer-main .footer-top{
-    height:570px
+    height:585px;
+    
   }
 }
 .footer-main .footer-bottom{
