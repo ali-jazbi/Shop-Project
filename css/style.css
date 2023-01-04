@@ -206,8 +206,8 @@ header .pc-navbar{
 }
 .dropdown-style{
     position: absolute;
-    left: -475%;
-    width: 80rem;
+    left: -520%;
+    width: 78rem;
     height:25rem;
     background-color: #fff;
     border-radius: 10px;
@@ -758,7 +758,7 @@ header .pc-navbar{
 
 /* NOTE Crad Banner */
 .card-banner{
-  width:350px;
+  width:310px;
   height:410px;
   z-index: 999;
   background-color:white;
