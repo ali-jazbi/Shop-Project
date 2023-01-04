@@ -7,6 +7,13 @@ let btnFooter=document.getElementById("btn-footer");
 let vertical_ul=document.getElementById("vertical-ul-sm");
 let drop=document.getElementById("drop");
 let dropSTYLE=document.getElementById('dropdown');
+let dropSEARCH=document.getElementById("drop-search");
+dropSEARCH.addEventListener("mouseover", function search_1() {
+  document.body.style.overflowY="hidden";
+});
+dropSEARCH.addEventListener("mouseout", function search_2() {
+  document.body.style.overflowY="auto";
+});
 dropSTYLE.addEventListener("mouseover", myScript_1);
 dropSTYLE.addEventListener("mouseout", myScript_2);
 function myScript_1(){
