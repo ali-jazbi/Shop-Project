@@ -1079,11 +1079,15 @@ header .pc-navbar{
     -webkit-mask-composite: destination-out;
     filter: hue-rotate(0);
     animation: rotate-hue linear 5500ms infinite;
+    -webkit-animation:  rotate-hue linear 5500ms infinite;
     animation-play-state:running;
+    -webkit-animation-play-state:running;
    }
    .card:hover::after {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
     --border-width: 1.5px;
+    -webkit-animation: rotate-hue linear 1500ms infinite;
     animation: rotate-hue linear 1500ms infinite;
 
    }
