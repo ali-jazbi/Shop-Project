@@ -146,10 +146,12 @@ header .pc-navbar{
   transition: .5s all ease-in-out;
   -webkit-transition: .5s all ease-in-out;
   -moz-transition:  .5s all ease-in-out;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   z-index: 999999;
+  top: -5px;
+  position:fixed;
 }
 #navbar-sm button{
   background-color: transparent;
@@ -169,7 +171,7 @@ header .pc-navbar{
     background-color:white;
     border-radius: 3px;
   }
-  #navbar-sm .form:focus-within{
+#navbar-sm .form:focus-within{
     border-radius: 10px 10px 0 0 !important;
   }
 .pc-navbar .li-style{
@@ -208,7 +210,7 @@ header .pc-navbar{
     position: absolute;
     left: -520%;
     width: 78rem;
-    height:25rem;
+    height:20rem;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 25px 65px 0 rgb(0 0 0 / 10%);
@@ -220,7 +222,7 @@ header .pc-navbar{
     transform: scale(1);
     transform-origin: top;
     visibility: hidden;
-    z-index: 1;
+    z-index: 999999999;
     transition: .2s all ease-in-out;
     -webkit-transition: .2s all ease-in-out;
     -moz-transition:  .2s all ease-in-out;
@@ -242,10 +244,11 @@ header .pc-navbar{
   margin: 0;
 }
 .dropdown-style .col ul h5{
-  color:#3b8195
+  color:#3b8195;
+  font-size: 17px;
 }
 .dropdown-style .col ul{
-  height:22.5rem;
+  height:17.5rem;
   transition: 0.3s all ease-in-out;
   display: none;
 }
@@ -265,7 +268,7 @@ header .pc-navbar{
   width: 100%;
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
   white-space: nowrap;
 
 }
@@ -278,8 +281,9 @@ header .pc-navbar{
   height:30px;
   display: flex;
   align-items: center;
-  color:rgba(45, 38, 38, 0.804) !important;
+  color:rgba(45, 38, 38, 0.699) !important;
   font-weight: normal;
+  font-size: 15px;
   transition: 0.2s all ease-in-out;
 }
 .dropdown-style ul li a:hover{
@@ -311,7 +315,7 @@ header .pc-navbar{
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
-  z-index: 2;
+  z-index: 99999;
   cursor: pointer;
 }
 .dropdown-menu a::before{
@@ -592,7 +596,6 @@ header .pc-navbar{
 }
 @media (min-width:768px) and (max-width:992px){
   .banner{
-    margin-top: 100px;
     padding-top: 80px;
     height: auto;
     background-position: 200% 30%;
@@ -790,12 +793,10 @@ header .pc-navbar{
   z-index:2;
   transition: 0.3s all ease-in-out;
 }
-.card-banner img:hover{
-  transform: scale(1.1,1.1);
-}
 
 .card-banner .card-title{
-  font-size:1.513rem
+  font-size:1.513rem;
+  font-family:homa !important;
 }
 .card-banner a{
   color:#4A9FB7;
@@ -1033,7 +1034,8 @@ header .pc-navbar{
     width:100%;
 }
   .products-2 .col{
-    padding:20px;
+    margin:20px 0px 20px 0px;
+    
   }
   .products-2 .card {
     width: 270px;
