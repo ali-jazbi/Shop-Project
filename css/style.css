@@ -1039,6 +1039,7 @@ header .pc-navbar{
     width: 270px;
     height: 364px;
     padding: .8em;
+    box-shadow: 0 3px 10px rgb(186, 186, 186);
     background: #ffffff;
     position: relative;
     transition:.2s all ease-in-out;
