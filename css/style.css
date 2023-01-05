@@ -231,6 +231,9 @@ header .pc-navbar{
   opacity: 1;
   visibility:visible;
 }
+#drop{
+  border-bottom: 2px solid rgba(255, 0, 0, 0);
+}
 .dropdown:hover .dropdown-style .col ul{
   display: block;
 }
@@ -1035,7 +1038,6 @@ header .pc-navbar{
 }
   .products-2 .col{
     margin:20px 0px 20px 0px;
-    
   }
   .products-2 .card {
     width: 270px;

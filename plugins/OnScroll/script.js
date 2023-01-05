@@ -22,19 +22,14 @@ function overlayOFF(){
   inputSCH.placeholder="جست و جو ... ";
   form_1.style.backgroundColor="transparent";
 }
-dropSEARCH.addEventListener("mouseover", function search_1() {
-  document.body.style.overflowY="hidden";
-});
-dropSEARCH.addEventListener("mouseout", function search_2() {
-  document.body.style.overflowY="auto";
-});
+
 dropSTYLE.addEventListener("mouseover", myScript_1);
 dropSTYLE.addEventListener("mouseout", myScript_2);
 function myScript_1(){
-  drop.style.borderBottom="3px solid #4A9FB7"
+  drop.style.borderColor="#4A9FB7";
 }
 function myScript_2(){
-  drop.style.borderBottom="0"
+  drop.style.borderColor="transparent"
 }
 window.onscroll = function () {
   scrollFunction();
