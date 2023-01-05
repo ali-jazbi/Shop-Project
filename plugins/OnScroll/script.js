@@ -8,6 +8,20 @@ let vertical_ul=document.getElementById("vertical-ul-sm");
 let drop=document.getElementById("drop");
 let dropSTYLE=document.getElementById('dropdown');
 let dropSEARCH=document.getElementById("drop-search");
+let overlay_body=document.getElementById("overlay-menu");
+let inputSCH=document.getElementById("inOver");
+let form_1=document.getElementById("form-overlay");
+function overlay(){
+  overlay_body.style.display="block";
+  let place=document.querySelectorAll(".dropdown-item")[1].innerHTML;
+  inputSCH.placeholder=place;
+  form_1.style.backgroundColor="rgba(255, 255, 255, .93)";
+}
+function overlayOFF(){
+  overlay_body.style.display="none";
+  inputSCH.placeholder="جست و جو ... ";
+  form_1.style.backgroundColor="transparent";
+}
 dropSEARCH.addEventListener("mouseover", function search_1() {
   document.body.style.overflowY="hidden";
 });
