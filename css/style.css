@@ -1295,6 +1295,18 @@ header .pc-navbar{
   .sideMenu input[type="text"]:focus{
     border: 3px solid #4A9FB7;
   }
+  .sideMenu input[type="checkbox"]{
+    width:15px;
+    height:15px;
+    cursor: pointer;
+  }
+  .sideMenu label{
+    color: rgb(42, 42, 42);
+  }
+  .sideMenu label:hover{
+    cursor: pointer;
+    color:#4A9FB7;
+  }
   .sideMenu input::placeholder {
     text-align:center;
     font-size:13px;
