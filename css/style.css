@@ -1232,7 +1232,90 @@ header .pc-navbar{
   height: 120px;
 }
 /* *-----------------END------------------- */
-
+/* NOTE Side menu clothes page */
+  .sideMenu{
+    height: auto;
+    color: rgb(42, 42, 42);
+}
+  .sideMenu .depetment{
+    width: 100%;
+  }
+  .sideMenu .depetment h5{
+    margin-bottom: 9px !important;
+  }
+  .sideMenu .depetment a{
+    font-weight: normal;
+    color: black;
+    font-size: 14px;
+  }
+  .sideMenu .depetment a:hover{
+    color:#4A9FB7;
+    text-decoration:none;
+  }
+  .sideMenu .title-sidenav h5{
+    font-weight: 700;
+    color:black
+  }
+  .sideMenu .title-sidenav ul{
+    margin-top:-15px;
+  }
+  .sideMenu .title-sidenav ul li{
+    list-style: none;
+    margin-right: -20px;
+    line-height:1.6;
+  }
+  .sideMenu .title-sidenav ul li a{
+    color: rgb(42, 42, 42);
+  }
+  .sideMenu .title-sidenav ul li a:hover{
+    color:#4A9FB7;
+    text-decoration:none;
+  }
+  .sideMenu .star-sidenav i{
+    color:#f3a839
+  }
+  .sideMenu .star-sidenav ul li:hover{
+    color:#f3a839;
+    cursor: pointer;
+  }
+  .sideMenu form{
+    line-height:1.5;
+    margin-top:-10px
+  }
+  .sideMenu input[type="text"] {
+    width: 65px;
+    height: 31px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin:20px 0 0 20px;
+    color:black;
+    box-sizing: border-box;
+  }
+  .sideMenu input[type="text"]:focus{
+    border: 3px solid #4A9FB7;
+  }
+  .sideMenu input::placeholder {
+    text-align:center;
+    font-size:13px;
+    color:rgb(160, 160, 160)
+  }
+  .sideMenu button{
+    width: 57px;
+    height: 24px;
+    border-radius:5px;
+    border: 2px solid #ccc;
+    background-color:transparent;
+    line-height:2px;
+    color:gray;
+    margin-right:10px;
+    font-size:13px;
+    box-shadow:0px 3px 7px rgb(237, 237, 237)
+  }
+  .sideMenu button:hover{
+    background-color:rgb(247, 247, 247);
+  }
+/* *-----------------END------------------- */
 
 /* NOTE Footer */
 .footer-main{
