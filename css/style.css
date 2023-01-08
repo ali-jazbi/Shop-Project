@@ -1549,6 +1549,9 @@ header .pc-navbar{
     .clothes-cards h3{
       font-size: 20px;
     }
+    .clothes-cards .badge {
+      font-size: 7px;
+    }
     .clothes-cards h3 span{
       font-size: 10px !important;
     }
@@ -1561,7 +1564,7 @@ header .pc-navbar{
       padding: 10px;
     }
     .clothes-cards .product-tumb img{
-      width: 70%;
+      width: 80%;
     }
     .clothes-cards .product-details {
       padding: 10px 10px 0px 10px;
