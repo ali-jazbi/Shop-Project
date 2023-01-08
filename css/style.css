@@ -1551,6 +1551,7 @@ header .pc-navbar{
     }
     .clothes-cards .badge {
       font-size: 7px;
+      line-height: 7px;
     }
     .clothes-cards h3 span{
       font-size: 10px !important;
