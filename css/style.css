@@ -1232,6 +1232,7 @@ header .pc-navbar{
   height: 120px;
 }
 /* *-----------------END------------------- */
+
 /* NOTE Side menu clothes page */
   .sideMenu{
     height: auto;
@@ -1284,7 +1285,7 @@ header .pc-navbar{
     margin-top:-10px
   }
   .sideMenu input[type="text"] {
-    width: 65px;
+    width: 45px;
     height: 31px;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -1314,7 +1315,7 @@ header .pc-navbar{
     color:rgb(160, 160, 160)
   }
   .sideMenu button{
-    width: 57px;
+    width: 37px;
     height: 24px;
     border-radius:5px;
     border: 2px solid #ccc;
@@ -1393,6 +1394,7 @@ header .pc-navbar{
     height: 100%;
     transition: transform 0.2s ease-in-out;
     border-radius:50px;
+    border:2px solid rgb(88, 88, 88)
   }
   label span.red {
     background: #DB2828;
@@ -1423,6 +1425,233 @@ header .pc-navbar{
   }
   label span.pink {
     background: #E03997;
+  }
+/* *-----------------END------------------- */
+
+/* NOTE Clothes Page Product Card */
+
+  .clothes-cards .product-card {
+    width: 290px;
+    height:420px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    background: #fafafa;
+    border-radius: 10px;
+    margin-bottom:25px;
+    cursor: pointer;
+  }
+
+  .clothes-cards .badge {
+    position: absolute;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: #E67A00;
+    border-radius: 10px 0 10px 0px;
+    color: #fff;
+    padding: 3px 10px;
+  }
+
+  .clothes-cards .product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 270px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f0f0f0;
+  }
+
+  .clothes-cards .product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .clothes-cards .product-details {
+    padding: 30px;
+    padding-top: 0;
+  }
+
+  .clothes-cards .product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-top:20px;
+    margin-bottom: -28px;
+  }
+
+  .clothes-cards .product-details h4 a {
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .clothes-cards .product-details h4 a:hover {
+    color: #fbb72c;
+  }
+  .clothes-cards .product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+
+  .clothes-cards .product-bottom-details div {
+    float: left;
+    width: 50%;
+  }
+
+  .clothes-cards .product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  .clothes-cards .product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .clothes-cards .product-links {
+    text-align: right;
+  }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .clothes-cards{
+      margin-top: 80px;
+    }
+    .clothes-cards .product-card {
+      width: 390px;
+      height:420px;
+    }
+  }
+  @media (max-width: 767px){
+    .main-clothes{
+      width: 100%;
+      display:flex;
+      justify-content: center;
+    }
+    .clothes-cards{
+      width: 100%;
+      margin-top: 200px;
+
+    }
+    .clothes-cards h3{
+      font-size: 20px;
+    }
+    .clothes-cards h3 span{
+      font-size: 10px !important;
+    }
+    .clothes-cards .product-card{
+      width:100%;
+      height:350px;
+    }
+    .clothes-cards .product-tumb {
+      height: 200px;
+      padding: 10px;
+    }
+    .clothes-cards .product-tumb img{
+      width: 70%;
+    }
+    .clothes-cards .product-details {
+      padding: 10px 10px 0px 10px;
+    }
+    .clothes-cards .product-catagory {
+      display: block;
+      font-size: 8px;
+    }
+    .clothes-cards .product-details h4 a{
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .clothes-cards .product-bottom-details {
+      padding-top: 20px;
+    }
+    .clothes-cards .product-price {
+      font-size: 14px;
+    }
+    .clothes-cards .product-price small {
+      display: none;
+    }
+  }
+  .clothes-cards .product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  .clothes-cards .product-links a:hover {
+    color: #fbb72c;
+  }
+  .clothes-cards .nextPage{
+    width: 100%;
+    height:60px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:20px;
+  }
+  .clothes-cards .nextPage .btn-next{
+    width:370px;
+    border:2px solid rgb(224, 221, 221);
+    border-radius: 10px;
+    height:50px;
+    display:flex;
+    align-items:center;    
+  }
+  .clothes-cards .nextPage .btn-next .NextP{
+    height:100%;
+    width:70px;
+    background-color:transparent;
+    cursor: pointer;
+  }
+  .clothes-cards .nextPage button{
+    width:50px;
+    height:100%;
+    color:rgb(97, 97, 97);
+    background-color:transparent;
+  }
+  .clothes-cards .nextPage i {
+    font-size: 12px;
+  }
+  .clothes-cards .nextPage .btn-next button:hover{
+    background-color: rgb(244, 244, 244);
+  }
+  .clothes-cards .nextPage .btn-next button:disabled{
+    color:rgb(178, 175, 175);
+  }
+  .clothes-cards .nextPage .btn-next button:disabled:hover{
+    cursor: not-allowed;
+    background-color: rgb(255, 255, 255);
+  }
+  .clothes-cards hr{
+    margin-top:40px;
+    height:3px;
+    background-color: rgb(155, 155, 155);
+  }
+  .clothes-cards .card{
+    height:340px !important;
+    cursor:pointer;
+    margin: 0 10px;
+  }
+  .clothes-cards .card a{
+    color:black;
+  }
+  .clothes-cards .card a:hover{
+    color:#4A9FB7;
+    text-decoration:none;
   }
 /* *-----------------END------------------- */
 
