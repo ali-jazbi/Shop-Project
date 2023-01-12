@@ -1783,7 +1783,51 @@ header .pc-navbar{
 .smartwatch .card .card-title:hover{
   color:#4A9FB7
 }
-
+@media (max-width:768px){
+  .smartwatch{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: hidden ;
+    text-overflow: ellipsis ;
+}
+.smartwatch .card h3 span{
+  margin: 0 !important;
+}
+.smartwatch .card .card-title{
+  font-size:14px
+}
+.smartwatch .card .row{
+  display: flex;
+  width:100%;
+  justify-content:center;
+  margin:0
+}
+.smartwatch .card .row button{
+  margin-top: 5px;
+  font-size: 14px;
+  width: 57%;
+  display: flex;
+  justify-content:space-between;
+}
+.smartwatch .card .row button svg{
+  width: 18px;
+}
+  .smartwatch .card{
+    height:500px !important;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 30px 0 0 0 !important;
+    padding:0 !important;
+    justify-content: center;
+  }
+  .smartwatch .card img{
+    width:150px;
+    height:150px;
+    /* margin-top: 125%; */
+  }
+}
 @media (min-width: 768px) and (max-width: 979px) {
   .smartwatch .card img{
     width:100%;
