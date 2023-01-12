@@ -1795,7 +1795,8 @@ header .pc-navbar{
   margin: 0 !important;
 }
 .smartwatch .card .card-title{
-  font-size:14px
+  font-size:14px;
+  text-align:justify;
 }
 .smartwatch .card .row{
   display: flex;
