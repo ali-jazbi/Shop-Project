@@ -1837,6 +1837,59 @@ header .pc-navbar{
 }
 /* *-----------------END------------------- */
 
+/* NOTE About us pop us */
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 70%;
+  border-radius: 10px;
+  height: 400px;
+  background: #FFF;
+  z-index: 99999;
+  text-align:center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup1 {
+  -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+}
+.popup h2{
+  font-weight: bold;
+  text-shadow: 0px 8px 8px rgb(230, 230, 230);
+  color:#377586;
+}
+.popup span{
+  display:flex;
+  width:100%;
+  justify-content: flex-start;
+}
+.popup i{
+  cursor: pointer;
+  font-size:20px;
+  transition: color .15s ease-in-out;
+}
+.popup i:hover{
+  color:red;
+}
+.popup p{
+  font-size:15px;
+  line-height: 1.5;
+  text-align:start
+}
+.popup a{
+  padding:20px;
+}
+.popup a i{
+  color:#377586;
+  transition: .1s all ease-in-out;
+}
+.popup a i:hover{
+  color:#54a4ba;
+}
+/* *-----------------END------------------- */
 
 /* NOTE Footer */
 .footer-main{

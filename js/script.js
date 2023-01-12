@@ -8,3 +8,14 @@
     });
   });
 })(jQuery);
+
+
+let pop=document.getElementById("popup1");
+          function show1() {
+            pop.style.display="flex";
+            document.body.style.overflow="hidden";
+           }
+         function hide1() {
+          pop.style.display="none";
+          document.body.style.overflow="auto";
+         }

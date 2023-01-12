@@ -181,7 +181,7 @@
                         <a class="nav-link" href="#">پوشاک</a>
                       </li>
                       <li class="nav-item li-style">
-                        <a class="nav-link" href="#">درباره ما</a>
+                        <a class="nav-link" onclick="show1()" href="#">درباره ما</a>
                       </li>
                       <li class="nav-item li-style">
                         <a class="nav-link" href="#">ارتباط با ما</a>
@@ -484,7 +484,34 @@
               </div>
         </header>
         <div id="overlay-menu" onclick="overlayOFF()"></div>
+        <div class="d-flex w-100 justify-content-center">
+        <div class="popup" id="popup1">
+          <span><i onclick="hide1()" class="bi bi-x-circle"></i>
+          </span>
+          
+          <div class="row w-100 h-100">
+            <div class="col w-100">
+              <h2>برندی متفاوت</h2>
+              <p>
+                ماموریت ما ارائه طیف وسیعی از برنامه های کاربردی تجاری آسان است که مجموعه کاملی از ابزارها را برای هر نیاز تجاری تشکیل می دهند. ما به میلیون‌ها شرکت امکان دسترسی آسان به نرم‌افزاری را می‌دهیم که برای اجرا و گسترش کسب‌ و کارشان نیاز دارند.
+              </p>
+              <p>
+                در اینجا در Amazon ما 30 برنامه اصلی را توسعه داده ایم که به طور مرتب ارتقا می یابند. علاوه بر این، جامعه ما با بیش از 1500 عضو فعال، به بیش از 16000 برنامه کمک کرده است تا طیف گسترده ای از نیازهای تجاری را پوشش دهد.
+              </p>
+              <div style="margin-top:86px">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>         
+              </div>
+            </div>
+            <div class="col w-100">
+              <img class="w-100 h-auto rounded" src="./images/team.webp" alt="">
+            </div>
+          </div>
 
+        </div>
+        </div>
         <!-- SECTION main section -->
         <section class="main-clothes mt-3">
             <div class="row w-100">
@@ -1080,8 +1107,8 @@
                           </div>
                         </div>
                       </div>
-                    </div>
                 </div>
+            </div>
             </div>
         </section>
 
