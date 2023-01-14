@@ -1841,7 +1841,7 @@ header .pc-navbar{
 
 /* NOTE About us pop us */
 .popup {
-  display: none;
+  display: flrx;
   position: fixed;
   padding: 10px;
   width: 70%;
@@ -1852,6 +1852,10 @@ header .pc-navbar{
   text-align:center;
   flex-direction: column;
   align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, all 0.3s ease-in-out;
+  top:0px;
 }
 
 #popup1 , #popup2 {
