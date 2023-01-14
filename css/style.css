@@ -1841,7 +1841,7 @@ header .pc-navbar{
 
 /* NOTE About us pop us */
 .popup {
-  display: flrx;
+  display: flex;
   position: fixed;
   padding: 10px;
   width: 70%;
@@ -1994,6 +1994,195 @@ header .pc-navbar{
   color: #4A9FB7;
 }
 /* *-----------------END------------------- */
+
+
+/* NOTE Single Product Page */
+  .product-banner{
+    height:760px;
+    background-color:#F6F5F3;
+  }
+  .product-banner .product-discription{
+    height:90%;
+    display:flex;
+    justify-content: center;
+    align-items: center
+  }
+  .product-banner .product-discription .pd-box{
+    width:370px;
+    height:460px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-banner .product-discription .pd-box .row{
+    height:60px !important;
+  }
+  .product-banner .product-discription .pd-box span{
+    font-family: sans-serif;
+    height:5%;
+    display:inline-block;
+    width:auto;
+  }
+  .product-banner .product-discription .pd-box i{
+    transition: 0.2s all ease-in-out;
+  }
+  .product-banner .product-discription .pd-box .bi-suit-heart:hover{
+    color:red;
+    cursor:pointer;
+  }
+  .product-banner .product-discription .pd-box h3{
+    width: 100%;
+    height:8%;
+    font-weight: 600;
+  }
+  .product-banner .product-discription .pd-box hr{
+    width:93%;
+    border: none; 
+    margin:1px;
+    border-bottom: 1.1px solid rgb(157, 157, 157);
+  }
+  .product-banner .product-discription .pd-box .offcanvas{
+    z-index: 9999999;
+    width:500px
+  }
+  .product-banner .product-discription .pd-box .offcanvas button:focus{
+    box-shadow: none;
+  }
+  .product-banner .product-discription .pd-box .offcanvas .offcanvas-header{
+    border-bottom: 1px solid rgb(204, 204, 204);
+  }
+  .product-banner .offcanvas-body{
+    display: flex;
+    justify-content: center;
+  }
+  .product-banner .offcanvas-body .row{
+    width:90%;
+  }
+  .product-banner .offcanvas-body .card{
+    border: 1px solid #e1dfd8;
+    margin-bottom: 30px;
+    transition: 0.1s all ease-in-out;
+    direction: rtl;
+  }
+  .product-banner .offcanvas-body .card:hover{
+    border: 1px solid #161616;
+    cursor: pointer;
+  }
+  .product-banner .offcanvas-body .card img{
+  background: #8e9eab6c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #bcccd86c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #bcccd86c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .product-banner .product-discription .pd-box button{
+    width: 100%;
+    height:52px;
+    display: flex;
+    background-color:transparent;
+    align-items:center;
+    justify-content: space-between;
+  }
+  .product-banner .product-discription .pd-box button span{
+    font-size: 16px;
+    height: auto;
+  }
+  .product-banner .product-discription .pd-box .btn-product-page{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
+  .product-banner .product-discription .pd-box .btn-product-page button {
+    font-size: 16px;
+    width:90%;
+    height:48px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    background:#4A9FB7;
+    color: white;
+    padding: 0.5em 1.2em;
+    padding-left: 0.9em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    direction:ltr
+  }
+  
+  .product-banner .product-discription .pd-box .btn-product-page button span {
+    display: block;
+    margin-left: 1.3em;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .product-banner .product-discription .pd-box .btn-product-page button svg {
+    display: block;
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+  
+  .product-banner .product-discription .pd-box .btn-product-page button:hover .svg-wrapper {
+    -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
+            animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .product-banner .product-discription .pd-box .btn-product-page button:hover svg {
+    -webkit-transform: translateX(5em);
+        -ms-transform: translateX(5em);
+            transform: translateX(5em);
+  }
+  
+  .product-banner .product-discription .pd-box .btn-product-page button:hover span {
+    -webkit-transform: translateX(13.8em);
+        -ms-transform: translateX(13.8em);
+            transform: translateX(13.8em);
+  }
+  
+  .product-banner .product-discription .pd-box .btn-product-page button:active {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  
+  @-webkit-keyframes fly-1 {
+    from {
+      -webkit-transform: translateY(0.1em);
+              transform: translateY(0.1em);
+    }
+  
+    to {
+      -webkit-transform: translateY(-0.1em);
+              transform: translateY(-0.1em);
+    }
+  }
+  
+  @keyframes fly-1 {
+    from {
+      -webkit-transform: translateY(0.1em);
+              transform: translateY(0.1em);
+    }
+  
+    to {
+      -webkit-transform: translateY(-0.1em);
+              transform: translateY(-0.1em);
+    }
+  }
+/* *-----------------END------------------- */
+
+
 
 /* NOTE Footer */
 .footer-main{
