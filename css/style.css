@@ -2047,30 +2047,30 @@ header .pc-navbar{
     margin:1px;
     border-bottom: 1.1px solid rgb(157, 157, 157);
   }
-  .product-banner .product-discription .pd-box .offcanvas{
+  .product-banner .product-discription .pd-box .offcanvas , .product-detailes .offcanvas{
     z-index: 9999999;
     width:500px
   }
-  .product-banner .product-discription .pd-box .offcanvas button:focus{
+  .product-banner .product-discription .pd-box .offcanvas button:focus , .product-detailes .offcanvas button:focus{
     box-shadow: none;
   }
-  .product-banner .product-discription .pd-box .offcanvas .offcanvas-header{
+  .product-banner .product-discription .pd-box .offcanvas .offcanvas-header , .product-detailes .offcanvas .offcanvas-header{
     border-bottom: 1px solid rgb(204, 204, 204);
   }
-  .product-banner .offcanvas-body{
+  .product-banner .offcanvas-body , .product-detailes .offcanvas-body {
     display: flex;
     justify-content: center;
   }
-  .product-banner .offcanvas-body .row{
+  .product-banner .offcanvas-body .row , .product-detailes .offcanvas-body .row{
     width:90%;
   }
-  .product-banner .offcanvas-body .row ul{
+  .product-banner .offcanvas-body .row ul , .product-detailes .offcanvas-body ul{
     width: 100%;
     list-style: none;
     font-size: 16px;
     font-family: sans-serif;
   }
-  .product-banner .offcanvas-body .row ul li{
+  .product-banner .offcanvas-body .row ul li , .product-detailes .offcanvas-body ul li{
     padding: 20px 0;
     border-bottom: 1px solid #e1dfd8;
     
@@ -2265,7 +2265,26 @@ header .pc-navbar{
     background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
-  
+  .product-detailes .col-md-6 ul{
+    padding-right:15px;
+  }
+  @media (max-width:992px){
+    .product-detailes .care-product{
+      border-top: 1px solid #93a1b0;
+      padding-top:30px;
+    }
+    .product-detailes .care-product a{
+      width:100%;
+      display:block;
+      border-bottom: 0 !important;
+      font-weight: 500;
+    }
+    .product-detailes .care-product a span{
+      font-weight: bolder !important;
+      color:black;
+    }
+  }
+
 /* *-----------------END------------------- */
 
 

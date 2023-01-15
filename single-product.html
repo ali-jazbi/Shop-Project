@@ -617,7 +617,7 @@
                                 <span class="text-black">مشکی<i class="bi bi-square-fill ps-3"></i><i class="bi bi-chevron-left ps-3"></i></span>
                             </button>
                             <div dir="ltr" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                                <div class="offcanvas-header">
+                                <div dir="rtl" class="offcanvas-header">
                                     <h3 style="margin-top:-30px" class="offcanvas-title" id="offcanvasExampleLabel">
                                     رنگ بندی
                                     </h3>
@@ -671,7 +671,7 @@
                                 <span class="text-black">42<i class="bi bi-chevron-left ps-3"></i></span>
                             </button>
                             <div dir="ltr" class="offcanvas offcanvas-start offcanvasExample2" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                              <div class="offcanvas-header">
+                              <div dir="rtl" class="offcanvas-header">
                                   <h3 style="margin-top:-30px" class="offcanvas-title" id="offcanvasExampleLabel">
                                   سایز بندی
                                   </h3>
@@ -733,7 +733,7 @@
         </section>
 
         <!-- SECTION Product Detailes -->
-        <section class="product-detailes">
+        <section class="product-detailes d-flex flex-column align-items-center">
           <div class="container">
             <div class="d-flex justify-content-center d-md-block">
             <div style="text-align:justify;" class="opacity-75 w-100 lh-lg">
@@ -808,7 +808,7 @@
               margin:10px;
               border-bottom: 1.1px solid rgb(157, 157, 157);">
             </div>
-              <div class="row w-100 d-flex justify-content-between">
+            <div class="row w-100 d-flex justify-content-between">
               <div class="col-12 col-md-6 mt-4 lh-lg">
                 <ul>
                   <li>آبی دریایی</li>
@@ -829,7 +829,61 @@
                   <li>گل های مونوگرام در کناره</li>
                 </ul>
               </div>
+            </div>
+
+            <div class="care-product" style="margin-top:60px;">
+              <a onclick="productOFF()"
+              data-bs-toggle="offcanvas"
+              data-bs-target=".offcanvasExample3"
+              aria-controls="offcanvasExample" class="text-black border-bottom border-primary text-decoration-none" >نگهداری محصول
+              <span style="float:left"><i class="d-lg-none bi-chevron-left"></i></span>
+              </a>
+              <div dir="ltr" class="offcanvas offcanvas-start offcanvasExample3" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">     
+                    <button type="button" class="btn-close w-auto pe-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h3 style="margin-top:0px" class="offcanvas-title fw-bold ps-2" id="offcanvasExampleLabel">
+                      نگهداری محصول
+                    </h3>
+                </div>
+                <div class="offcanvas-body mt-5">
+                    <div class="row">
+                        <p dir="rtl" class="fw-bold lh-base">
+                          برای حفظ زیبایی محصول خود، توصیه می کنیم این دستورالعمل ها را برای مراقبت از آن رعایت کنید
+                        </p>
+                        <p style="font-size:15px;" dir="rtl" class="lh-lg opacity-50">
+                                                    کفش های شما از دو یا چند ماده زیر ساخته شده اند:
+                          <br>
+                                                    - پارچه: با یک برس یا یک پارچه نرم و کمی مرطوب تمیز کنید.
+                                                    <br>
+                          - چرم جیر یا نوبوک: برای حفظ ظاهر مخملی چرم، آن را به آرامی با یک برس نرم تمیز کنید. لکه های سطحی را می توان با یک برس کرپ پاک کرد.
+                          <br>
+                          - چرم صاف یا دانه دار: با یک پارچه نرم و مرطوب تمیز کنید. وقتی چرم خشک شد، یک کرم بی رنگ با کیفیت بمالید و با یک پارچه نرم با حرکات دایره ای پولیش دهید.
+                          <br>
+                          - چرم لعاب دار: با یک پارچه نرم و کمی مرطوب تمیز کنید، سپس با یک پارچه نرم و خشک جلا دهید.
+                          <br>
+                          - چرم متالیک: با یک پارچه نرم و خشک تمیز کنید.
+                          <br>
+                          - چرم عجیب و غریب: با یک پارچه نرم و خشک تمیز کنید، سپس یک کرم بی رنگ با کیفیت بمالید، به آرامی در جهت فلس ها کار کنید تا چرم را تغذیه کرده و لطافت آن را حفظ کنید.
+                          <br>
+                          کفش های خود را در کیسه نمدی تهیه شده نگه دارید و در مکانی خنک، خشک و دارای تهویه مناسب نگهداری کنید.
+                          از تماس با آب، هر ماده حاوی الکل (عطر، حلال و غیره) یا روغن (آرایش) و به طور کلی محصولات ساینده خودداری کنید.
+                          <br>
+                          مهم است که به کفش های کتانی خود اجازه دهید به صورت دستی هوا بخورند و برای این منظور دارای یک جوراب قابل جابجایی هستند. اگر کفش کتانی شما خیس شد، به سادگی جوراب آن را بردارید و بگذارید در مکانی خنک و دارای تهویه مناسب خشک شود. این امر راحتی بیشتری را در هنگام پوشیدن بعدی تضمین می کند.
+                          <br><br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:100px" class="row w-100 mt-5 d-flex justify-content-center">
+              <div class="col-12 mt-2 col-lg-6">
+                  <img src="./images/singleProduct/big-1.webp" alt="">
               </div>
+              <div class="col-12 mt-2 col-lg-6">
+                <img src="./images/singleProduct/big-2.webp" alt="">
+            </div>
           </div>
         </section>
 
