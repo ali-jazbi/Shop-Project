@@ -557,13 +557,13 @@
         <!--SECTION Main Product Banner -->
         <section dir="ltr" class="product-banner d-flex justify-content-center">
             <div class="row w-100 h-100">
-              <div dir="rtl" class="col col-lg-6">
+              <div class="col-12 slider-product col-lg-6">
                 <div id="carouselExampleDark" touch="true" class="carousel carousel-dark slide">
                   <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 4"></button>
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
@@ -597,7 +597,7 @@
                   </button>
                 </div>
               </div>
-                <div dir="rtl" class="col col-lg-6 product-discription">
+                <div dir="rtl" class="col-12 col-lg-6 product-discription">
                     <div class="pd-box">
                         <div dir="ltr" class="row w-100 h-auto d-flex justify-content-between">
                             <span>1AARRC</span>
@@ -612,8 +612,8 @@
                             data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasExample"
                             aria-controls="offcanvasExample">
-                                <span>رنگ بندی</span>
-                                <span>مشکی<i class="bi bi-square-fill ps-3"></i><i class="bi bi-chevron-left ps-3"></i></span>
+                                <span class="text-black">رنگ بندی</span>
+                                <span class="text-black">مشکی<i class="bi bi-square-fill ps-3"></i><i class="bi bi-chevron-left ps-3"></i></span>
                             </button>
                             <div dir="ltr" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                                 <div class="offcanvas-header">
@@ -662,10 +662,33 @@
                         </div>
                         <hr>
                         <div style="height:52px !important" class="row w-100">
-                            <button>
-                                <span>سایز بندی</span>
-                                <span>42<i class="bi bi-chevron-left ps-3"></i></span>
+                            <button onclick="productOFF()"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target=".offcanvasExample2"
+                            aria-controls="offcanvasExample">
+                                <span class="text-black">سایز بندی</span>
+                                <span class="text-black">42<i class="bi bi-chevron-left ps-3"></i></span>
                             </button>
+                            <div dir="ltr" class="offcanvas offcanvas-start offcanvasExample2" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                              <div class="offcanvas-header">
+                                  <h3 style="margin-top:-30px" class="offcanvas-title" id="offcanvasExampleLabel">
+                                  سایز بندی
+                                  </h3>
+                                  <button type="button" class="btn-close w-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body mt-5">
+                                  <div class="row">
+                                    <ul>
+                                      <li><a href="#"></a>38</li>
+                                      <li><a href="#"></a>39</li>
+                                      <li><a href="#"></a>40</li>
+                                      <li><a href="#"></a>41</li>
+                                      <li><a href="#"></a>42<i style="float:right" class="bi bi-check2 me-auto"></i></li>
+                                      <li><a href="#"></a>43</li>
+                                    </ul>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                         <hr>
                         <div class="row w-100">
@@ -693,7 +716,7 @@
                                   <span>افزودن به علاقه مندی </span>
                                 </button>
                             </div>
-                        <div style="margin-top:100px;" class="row w-100 ms-1">
+                        <div style="margin-top:100px;" class="row w-100 ms-lg-1 pro-details">
                             <a href="#">
                                 <span style="color:#3a3a3a;font-size:13px">
                                     جزئیات محصول<i class="bi bi-three-dots ms-2"></i>

@@ -9,7 +9,6 @@
   });
 })(jQuery);
 
-
 let pop=document.getElementById("popup1");
 let pop2=document.getElementById("popup2");
           function show1() {

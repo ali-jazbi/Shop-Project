@@ -1998,8 +1998,14 @@ header .pc-navbar{
 
 /* NOTE Single Product Page */
   .product-banner{
-    height:760px;
+    height:90vh;
     background-color:#F6F5F3;
+  }
+  .product-banner .slider-product{
+    position:relative;
+  }
+  .product-banner .carousel .carousel-inner .carousel-item img{
+    height:80vh
   }
   .product-banner .product-discription{
     height:90%;
@@ -2057,6 +2063,17 @@ header .pc-navbar{
   }
   .product-banner .offcanvas-body .row{
     width:90%;
+  }
+  .product-banner .offcanvas-body .row ul{
+    width: 100%;
+    list-style: none;
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+  .product-banner .offcanvas-body .row ul li{
+    padding: 20px 0;
+    border-bottom: 1px solid #e1dfd8;
+    
   }
   .product-banner .offcanvas-body .card{
     border: 1px solid #e1dfd8;
@@ -2178,6 +2195,54 @@ header .pc-navbar{
     to {
       -webkit-transform: translateY(-0.1em);
               transform: translateY(-0.1em);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .product-banner{
+      margin-top:200px;
+      height:auto !important;
+      background-color: white !important;
+    }
+    .product-banner .slider-product{
+      margin-bottom: 50px;
+    }
+    .product-banner .product-discription .pd-box{
+      background-color: white !important;
+    }
+    .product-banner .carousel .carousel-inner .carousel-item img{
+      height:55vh !important;
+    }
+    .product-banner .product-discription .pd-box .pro-details{
+      text-align: center;
+      border-top: 1px solid #e1dfd8;
+      border-bottom: 1px solid #e1dfd8;
+      display:flex;
+      align-items: center;
+    }
+  }
+  @media (min-width: 767px) and (max-width:992px){
+    .product-banner{
+      margin-top:200px;
+      height:auto !important;
+      background-color: white !important;
+    }
+    .product-banner .slider-product{
+      margin-bottom: 50px;
+    }
+    .product-banner .carousel .carousel-inner .carousel-item img{
+      height:55vh !important
+    }
+    .product-banner .product-discription .pd-box{
+      width:100% !important;
+      background-color: white;
+    }
+    .product-banner .product-discription .pd-box .pro-details{
+      text-align: center;
+      border-top: 1px solid #e1dfd8;
+      border-bottom: 1px solid #e1dfd8;
+      display:flex;
+      align-items: center;
     }
   }
 /* *-----------------END------------------- */
