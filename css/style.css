@@ -1994,6 +1994,41 @@ header .pc-navbar{
 }
 /* *-----------------END------------------- */
 
+/* NOTE Pop up shopping cart */
+
+.table-image thead td, .table-image thead th {
+  padding-bottom: 20px !important;
+  color: #666;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(188, 188, 188, 0.386);
+
+
+}
+.table-image td, .table-image th {
+  vertical-align: middle;
+  text-align: center;
+  border:none;
+  font-family: sans-serif;
+}
+.table-image td.qty, .table-image th.qty {
+  width: 50px;
+  /* max-width: 2rem; */
+}
+
+.price {
+  margin-left: 1rem;
+}
+
+.modal-footer {
+  padding-top: 0rem;
+}
+@media only screen and (min-width: 720px){
+  .main-shopping-cart{
+    max-width: 720px;
+  }
+  
+}
+/* *-----------------END------------------- */
 
 /* NOTE Single Product Page */
   .product-banner{
