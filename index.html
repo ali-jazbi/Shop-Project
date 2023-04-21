@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./plugins/Bootstrap/css/bootstrap.rtl.min.css">
         <!-- Slider Card -->
         <link rel="stylesheet" href="./plugins/slider/dist/css/uikit.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
         <!-- fade animation style -->
         <link href="./plugins/aos/aos.css" rel="stylesheet">
         <!-- Bootstrap Icon -->
@@ -802,6 +803,37 @@
                     <a href="#">مشاهده اجناس</a>
                   </div>
                 </div>
+              </div>
+              <div dir="ltr" class="col col-sm-3 col-md-4 col-lg-3 mb-4 d-md-none">
+                <div class="container card-banner">
+                  <div class="swiffy-slider slider-nav-round slider-item-ratio slider-item-ratio-21x9" id="slider1">
+                    <h5 dir="rtl" class="card-title w-100 d-flex pt-3 ps-3">پیشنهاد ویژه</h5>
+                    <ul class="slider-container">
+                        <li><img src="./images/mouse.png" loading="lazy" alt="..."></li>
+                        <li><img src="./images/Camera-2.jpg" loading="lazy" alt="..."></li>
+                        <li><img src="./images/cheair.png" loading="lazy" alt="..."></li>
+                        <li><img src="./images/usb-hub.jpg" loading="lazy" alt="..."></li>
+                    </ul>
+                
+                    <button type="button" class="slider-nav" aria-label="Go left"></button>
+                    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+                
+                    <div class="slider-indicators slider-indicators-square d-none d-md-flex">
+                        <button class="active" aria-label="Go to slide"></button>
+                        <button aria-label="Go to slide"></button>
+                        <button aria-label="Go to slide"></button>
+                        <button aria-label="Go to slide"></button>
+                    </div>
+                
+                    <div class="slider-indicators slider-indicators-sm slider-indicators-dark slider-indicators-round d-md-none slider-indicators-highlight">
+                        <button class="active" aria-label="Go to slide"></button>
+                        <button aria-label="Go to slide"></button>
+                        <button aria-label="Go to slide"></button>
+                        <button aria-label="Go to slide"></button>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
               <div class="col col-sm-3 col-md-4 col-lg-3 mb-4 d-md-none">
                 <div class="container card-banner">
@@ -1614,6 +1646,7 @@
         <!-- Card Slider Plugin-->
         <script src="./plugins/slider/dist/js/uikit.min.js"></script>
         <script src="./plugins/slider/dist/js/uikit-icons.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
         <!-- fade animation plugin -->
         <script src="./node_modules/hero-slider/dist/HeroSlider.js"></script>
         <script src="./plugins/aos/aos.js"></script>

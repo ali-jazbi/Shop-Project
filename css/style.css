@@ -860,6 +860,15 @@ header .pc-navbar{
     margin-top:-300px;
   }
 }
+
+.swiffy-slider{
+  width: auto;
+  height: 99%;
+}
+.swiffy-slider img{
+  object-fit:contain !important;
+  z-index: 0;
+}
 /* *-----------------END------------------- */
 
 /* NOTE Planning Style */
