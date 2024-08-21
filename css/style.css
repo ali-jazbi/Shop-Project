@@ -2047,8 +2047,18 @@ header .pc-navbar{
   .product-banner .slider-product{
     position:relative;
   }
+  .product-banner .carousel{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+  .product-banner .carousel .carousel-inner .carousel-item{
+    
+  }
   .product-banner .carousel .carousel-inner .carousel-item img{
-    height:80vh
+    /* object-fit: cover; */
+    height:50vh;
+    margin: auto;
   }
   .product-banner .product-discription{
     height:90%;
