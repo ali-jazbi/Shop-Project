@@ -1288,6 +1288,11 @@ header .pc-navbar{
     color:#f3a839;
     cursor: pointer;
   }
+  .sideMenu .star-sidenav li a.checked{
+    padding: 0 5px;
+    color:#f3a839 !important;
+    box-shadow: 0 5px 10px 1px #f3a839;
+  }
   .sideMenu form{
     line-height:1.5;
     margin-top:-10px
@@ -1433,6 +1438,40 @@ header .pc-navbar{
   }
   label span.pink {
     background: #E03997;
+  }
+
+    
+  .cableItem {
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+  .cableItem-hide {
+    opacity: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .category__nav li a:before, .category__nav li a:after {
+    content: "";
+    width: 2px;
+    height: 11px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+  }
+  .category__nav li a:before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .category__nav li a:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .category__nav li a.checked {
+    background: #235d80;
+    padding: 0 10px;
+    color: #fff !important;
+    border-radius: 10px;
   }
 /* *-----------------END------------------- */
 

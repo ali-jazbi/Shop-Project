@@ -607,47 +607,50 @@
         <section class="main-clothes mt-3">
           <div class="row w-100">
               <div class="col-lg-2 sideMenu d-none d-lg-block ps-4">
-                    <div class="title-sidenav depetment">
+                    <!-- <div class="title-sidenav depetment">
                       <h5>دپارتمان</h5>
                       <a href="#"><i class="bi bi-chevron-right"></i>همه دپارتمان ها</a>
-                    </div>
-                    <div class="title-sidenav mt-2 ps-3">
+                    </div> -->
+                    <div class="title-sidenav mt-2 ps-3 category__nav">
                       <h5>پوشاک</h5>
-                      <ul>
-                        <li><a href="#">مردانه</a></li>
-                        <li><a href="#">زنانه</a></li>
-                        <li><a href="#">پسرانه</a></li>
-                        <li><a href="#">دخترانه</a></li>
-                        <li><a href="#">پوشاک کودک</a></li>
-                        <li><a href="#">پوشاک جدید</a></li>
-                        <li><a href="#">لباس کار</a></li>
-                        <li><a href="#">اکسسوری ها</a></li>
-                        <li><a href="#">چمدان و وسایل سفر</a></li>
-                        <li><a href="#">ساعت و اسمارت واچ</a></li>
-                        <li><a href="#">پوشاک ورزشی</a></li>
+                      <ul class="clothes-type">
+                        <li><a href="#" data-target="men">مردانه</a></li>
+                        <li><a href="#" data-target="women">زنانه</a></li>
+                        <li><a href="#" data-target="boy">پسرانه</a></li>
+                        <li><a href="#" data-target="girl">دخترانه</a></li>
+                        <li><a href="#" data-target="child">پوشاک کودک</a></li>
+                        <li><a href="#" data-target="new">پوشاک جدید</a></li>
+                        <li><a href="#" data-target="work">لباس کار</a></li>
+                        <li><a href="#" data-target="accessory">اکسسوری ها</a></li>
+                        <li><a href="#" data-target="trip">چمدان و وسایل سفر</a></li>
+                        <li><a href="#" data-target="watch">ساعت و اسمارت واچ</a></li>
+                        <li><a href="#" data-target="sport">پوشاک ورزشی</a></li>
                       </ul>
                     </div>
                     <div class="title-sidenav star-sidenav mt-2">
                       <h5>نظرات مشتریان</h5>
                         <ul>
-                          <li><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star pe-2"></i>به بالا</li>
-                          <li><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star pe-2"></i>به بالا</li>
-                          <li><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star pe-2"></i>به بالا</li>
-                          <li><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star pe-2"></i>به بالا</li>
+                          <li>
+                            <a href="#" data-target="4_star">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star pe-2"></i>به بالا
+                            </a>
+                            </li>
+                          <li>
+                            <a href="#" data-target="3_star">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star pe-2"></i>به بالا
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" data-target="2_star">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star pe-2"></i>به بالا
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" data-target="1_star">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star pe-2"></i>به بالا
+                            </a>
+                          </li>
                         </ul>
-                    </div>
-                    <div class="title-sidenav mt-2">
-                      <h5>برندینگ</h5>
-                      <form>
-                        <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
-                        <label for="checkbox1">برند ما</label>
-                        <br>
-                        <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2">
-                        <label for="checkbox2">برند های ویژه</label>
-                        <br>
-                        <input type="checkbox" id="checkbox3" name="checkbox3" value="checkbox3">
-                        <label for="checkbox3">برند های محبوب</label>
-                      </form>
                     </div>
                     <div class="title-sidenav mt-2">
                       <h5>برند</h5>
@@ -795,7 +798,7 @@
                   </div>
                     <div class="row d-flex justify-content-center">
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card ">
+                        <div class="product-card cableItem " data-target="girl, 4_star, , 3_star, 2_star, 1_star">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <a href="./single-product.html"><img src="./images/clothes/card1.png" alt=""></a>
@@ -814,7 +817,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card2.png" alt="">
                           </div>
@@ -832,7 +835,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card3.png" alt="">
@@ -851,7 +854,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card4.png" alt="">
                           </div>
@@ -869,7 +872,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card5.png" alt="">
                           </div>
@@ -887,7 +890,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card6.png" alt="">
                           </div>
@@ -905,7 +908,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card7.png" alt="">
                           </div>
@@ -923,7 +926,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card8.png" alt="">
@@ -943,7 +946,7 @@
                       </div>
 
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card1.png" alt="">
@@ -962,7 +965,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card2.png" alt="">
                           </div>
@@ -980,7 +983,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card3.png" alt="">
@@ -999,7 +1002,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card4.png" alt="">
                           </div>
@@ -1017,7 +1020,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card5.png" alt="">
                           </div>
@@ -1035,7 +1038,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card6.png" alt="">
                           </div>
@@ -1053,7 +1056,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card7.png" alt="">
                           </div>
@@ -1071,7 +1074,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card8.png" alt="">
@@ -1090,7 +1093,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card1.png" alt="">
@@ -1109,7 +1112,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card2.png" alt="">
                           </div>
@@ -1127,7 +1130,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card3.png" alt="">
@@ -1146,7 +1149,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card4.png" alt="">
                           </div>
@@ -1164,7 +1167,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card5.png" alt="">
                           </div>
@@ -1182,7 +1185,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card6.png" alt="">
                           </div>
@@ -1200,7 +1203,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="product-tumb">
                             <img src="./images/clothes/card7.png" alt="">
                           </div>
@@ -1218,7 +1221,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-lg-3 d-flex justify-content-center">
-                        <div class="product-card">
+                        <div class="product-card cableItem">
                           <div class="badge">Hot</div>
                           <div class="product-tumb">
                             <img src="./images/clothes/card8.png" alt="">
@@ -1288,7 +1291,7 @@
                           </div>
                         </div>
                       </div>
-              </div>
+                    </div>
               </div>
         </section>
 
@@ -1422,6 +1425,7 @@
         <script src="./js/typing.js"></script>
         <script src="./js/md-menu-all.js"></script>
         <script src="./js/card-slider.js"></script>
+        <script src="./js/filter.js"></script>
         <script>
           var menu = new MmenuLight(document.querySelector("#menu"), "all");
             var navigator = menu.navigation({
