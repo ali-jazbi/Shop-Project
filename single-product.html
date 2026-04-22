@@ -1,49 +1,80 @@
+<!--
+    =================================================================
+    SINGLE-PRODUCT.HTML - Individual Product Page
+    =================================================================
+    Purpose: Display detailed information for a single product
+    Language: Persian (RTL - Right To Left)
+    Author: Ali Jazbi
+    
+    Page Structure:
+    1. Preloader - Loading animation
+    2. Header/Navbar - Navigation menu (mobile & desktop)
+    3. Shopping Cart Modal - Cart popup
+    4. Popups - About Us & Contact Us modals
+    5. Product Banner - Main product image slider
+    6. Product Description - Price, rating, buy options
+    7. Product Details - Carousel with more product images
+    8. Product Specifications - Technical details
+    9. Product Care - Maintenance instructions
+    10. Product Gallery - Additional product images
+    11. Footer - Footer section with links
+    =================================================================
+-->
+
 <!doctype html>
 <html lang="fa" dir="rtl">
     <head>
-        <!-- Required meta tags -->
+        <!-- META TAGS: Define document properties -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Ali Jazbi">
+        <!-- Cache Control: Prevent browser caching -->
         <meta http-equiv='cache-control' content='no-cache'>
         <meta http-equiv='expires' content='0'>
         <meta http-equiv='pragma' content='no-cache'>
+        <!-- Favicon: Website icon in browser tab -->
         <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-        <!-- Bootstrap CSS -->
+        
+        <!-- CSS STYLESHEETS -->
+        <!-- Bootstrap CSS with RTL support (for Persian text) -->
         <link rel="stylesheet" href="./plugins/Bootstrap/css/bootstrap.rtl.min.css">
-        <!-- Slider Card -->
+        <!-- UIKit - Slider/Card component library -->
         <link rel="stylesheet" href="./plugins/slider/dist/css/uikit.min.css" />
-
-        <!-- fade animation style -->
+        <!-- AOS - Animate On Scroll library for animations -->
         <link href="./plugins/aos/aos.css" rel="stylesheet">
-        <!-- Bootstrap Icon -->
+        <!-- Bootstrap Icons - Icon library -->
         <link rel="stylesheet" href="./plugins/Bootstrap/bootstrap-icons/bootstrap-icons.css">
-        <!-- customized Style -->
+        <!-- Custom Stylesheets -->
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/menu-sm.css">
         <link rel="stylesheet" href="./css/offcanvas-menu-md.css">
         <title>LV SKATE SNEAKER</title>
     </head>
+    
     <body id="top">
-        <!-- NOTE Preloader -->
+        <!-- ========== PRELOADER ========== -->
+        <!-- Loading spinner shown while page is loading -->
         <div id="preloader">
             <div class='preloader'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        <!-- NOTE Back To Top Button -->
+        
+        <!-- ========== BACK TO TOP BUTTON ========== -->
+        <!-- Floating button to quickly return to top of page -->
         <button
-        type="button"
-        class="btn btn-floating fixed-bottom"
-        id="btn-back-to-top">
-        <i class="bi bi-arrow-up"></i>
+            type="button"
+            class="btn btn-floating fixed-bottom"
+            id="btn-back-to-top">
+            <i class="bi bi-arrow-up"></i>
         </button>
-        <!-- SECTION Navbar -->
+        
+        <!-- ========== HEADER & NAVIGATION ========== -->
         <header class="main-head">
           
             <!-- SECTION navbar expand on mobile -->
@@ -940,9 +971,8 @@
 
 
 
-
-
-           <!-- SECTION Footer -->
+        <!-- ========== FOOTER ========== -->
+        <!-- Footer section with company info, social links, and copyright -->
         <footer class="footer-main">
             <div class="footer-top">
               <div class="container">

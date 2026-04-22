@@ -1,123 +1,167 @@
+<!--
+    =================================================================
+    CLOTHES.HTML - Product Listing Page
+    =================================================================
+    Purpose: Display clothes products with filtering options
+    Language: Persian (RTL - Right To Left)
+    Author: Ali Jazbi
+    
+    Page Structure:
+    1. Preloader - Loading animation
+    2. Header/Navbar - Navigation menu (mobile & desktop)
+    3. Shopping Cart Modal - Cart popup
+    4. Popups - About Us & Contact Us modals
+    5. Main Content - Sidebar filters + product cards
+    6. Footer - Footer section with links
+    =================================================================
+-->
+
 <!doctype html>
 <html lang="fa" dir="rtl">
     <head>
-        <!-- Required meta tags -->
+        <!-- META TAGS: Define document properties -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Ali Jazbi">
+        <!-- Cache Control: Prevent browser caching -->
         <meta http-equiv='cache-control' content='no-cache'>
         <meta http-equiv='expires' content='0'>
         <meta http-equiv='pragma' content='no-cache'>
+        <!-- Favicon: Website icon in browser tab -->
         <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-        <!-- Bootstrap CSS -->
+        
+        <!-- CSS STYLESHEETS -->
+        <!-- Bootstrap CSS with RTL support (for Persian text) -->
         <link rel="stylesheet" href="./plugins/Bootstrap/css/bootstrap.rtl.min.css">
-        <!-- Slider Card -->
+        <!-- UIKit - Slider/Card component library -->
         <link rel="stylesheet" href="./plugins/slider/dist/css/uikit.min.css" />
-        <!-- fade animation style -->
+        <!-- AOS - Animate On Scroll library for animations -->
         <link href="./plugins/aos/aos.css" rel="stylesheet">
-        <!-- Bootstrap Icon -->
+        <!-- Bootstrap Icons - Icon library -->
         <link rel="stylesheet" href="./plugins/Bootstrap/bootstrap-icons/bootstrap-icons.css">
-        <!-- customized Style -->
+        <!-- Custom Stylesheets -->
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/menu-sm.css">
         <link rel="stylesheet" href="./css/offcanvas-menu-md.css">
         <title>Clothes Page</title>
     </head>
+    
     <body id="top">
-        <!-- NOTE Preloader -->
+        <!-- ========== PRELOADER ========== -->
+        <!-- Loading spinner shown while page is loading -->
         <div id="preloader">
             <div class='preloader'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        <!-- NOTE Back To Top Button -->
+        
+        <!-- ========== BACK TO TOP BUTTON ========== -->
+        <!-- Floating button to quickly return to top of page -->
         <button
-        type="button"
-        class="btn btn-floating fixed-bottom"
-        id="btn-back-to-top">
-        <i class="bi bi-arrow-up"></i>
+            type="button"
+            class="btn btn-floating fixed-bottom"
+            id="btn-back-to-top">
+            <i class="bi bi-arrow-up"></i>
         </button>
-        <!-- SECTION Navbar -->
+        
+        <!-- ========== HEADER & NAVIGATION ========== -->
         <header class="main-head">
-          
-            <!-- SECTION navbar expand on mobile -->
+            <!-- ========== MOBILE NAVBAR (Hidden on large screens) ========== -->
+            <!-- This navbar is shown only on mobile devices (d-lg-none class) -->
             <div id="navbar-sm" class="header fixed-top d-lg-none w-100 d-flex align-items-center justify-content-center flex-column">
-              <div style="height:3.525rem;" class="row w-100 d-flex justify-content-around align-items-center">
-                <div class="top-nav w-50 d-flex">
-                  <a class="navbar-brand">
-                    <button onclick="openNav()"> <i style="font-size:30px;color:black !important" class="bi bi-list"></i>
-                      <div id="closeBtn" class="d-none d-md-block" onclick="closeNav()">&times;</div>
-                    </button>
-                  </a>
-                  <a class="navbar-brand ps-3" href="./index.html">
-                    <img src="./images/amazon.svg" width="60" height="35">
-                  </a>
+                <!-- Mobile navbar top row: Menu button + Logo + User/Cart icons -->
+                <div style="height:3.525rem;" class="row w-100 d-flex justify-content-around align-items-center">
+                    <!-- Left side: Menu button + Logo -->
+                    <div class="top-nav w-50 d-flex">
+                        <!-- Menu button to open side navigation -->
+                        <a class="navbar-brand">
+                            <button onclick="openNav()"> 
+                                <i style="font-size:30px;color:black !important" class="bi bi-list"></i>
+                                <div id="closeBtn" class="d-none d-md-block" onclick="closeNav()">&times;</div>
+                            </button>
+                        </a>
+                        <!-- Logo - links to homepage -->
+                        <a class="navbar-brand ps-3" href="./index.html">
+                            <img src="./images/amazon.svg" width="60" height="35">
+                        </a>
+                    </div>
+                    
+                    <!-- Right side: User profile + Cart icons -->
+                    <div class="top-nav w-50 text-end">
+                        <!-- User profile icon -->
+                        <a class="navbar-brand pe-3" href="#">
+                            <i style="font-size:20px;" class="bi bi-person-circle"></i>
+                        </a>
+                        <!-- Shopping cart icon - opens cart modal -->
+                        <a data-bs-toggle="modal" data-bs-target="#cartModal" class="navbar-brand" href="#">
+                            <i style="font-size:20px;" class="bi bi-cart-dash"></i>
+                        </a>
+                    </div>
                 </div>
-                  <div class="top-nav w-50 text-end">
-                    <a class="navbar-brand pe-3" href="#">
-                      <i style="font-size:20px;" class="bi bi-person-circle"></i>
-                    </a>
-                    <a data-bs-toggle="modal" data-bs-target="#cartModal" class="navbar-brand" href="#">
-                      <i style="font-size:20px;" class="bi bi-cart-dash"></i>
-                    </a>
-                  </div>
-              </div>
-              
-              <form id="search-sm" class="form border mt-2">
-                <input class="input" placeholder="جست و جو ... " type="text">
-                <button class="reset" type="reset">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <button>
-                    <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-              </form>
-              <div id="vertical-ul-sm" class="vertical-ul-sm">
-                  <ul>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">پیشنهاد ویژه<i class="bi bi-stars ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">پرفروش ترین ها<i class="bi bi-bag-heart-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">تخفیفات روز<i class="bi bi-tags-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">خدمات مشتریان<i class="bi bi-person-heart ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">اطلاعات کاربری<i class="bi bi-person-vcard-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">گیفت کارت<i class="bi bi-gift-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">خرید<i class="bi bi-bag-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">فروش<i class="bi bi-wallet-fill ms-1"></i></a>
-                    </li>
-                  </ul>
-                  <div class="city-sm">
-                    <li class="nav-item me-3">
-                      <a class="nav-link" href="#">انتخاب شهر<i class="bi bi-geo-alt-fill ms-1"></i>
-                      </a>
-                    </li>
-                  </div>
-              </div>
+                
+                <!-- Mobile search bar -->
+                <form id="search-sm" class="form border mt-2">
+                    <input class="input" placeholder="جست و جو ... " type="text">
+                    <!-- Clear button -->
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <!-- Search button -->
+                    <button>
+                        <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </form>
+                
+                <!-- Mobile menu items (Vertical list) -->
+                <div id="vertical-ul-sm" class="vertical-ul-sm">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">پیشنهاد ویژه<i class="bi bi-stars ms-1"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">پرفروش ترین ها<i class="bi bi-bag-heart-fill ms-1"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">تخفیفات روز<i class="bi bi-tags-fill ms-1"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">خدمات مشتریان<i class="bi bi-person-heart ms-1"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">اطلاعات کاربری<i class="bi bi-person-vcard-fill ms-1"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">گیفت کارت<i class="bi bi-gift-fill ms-1"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">خرید<i class="bi bi-bag-fill ms-1"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">فروش<i class="bi bi-wallet-fill ms-1"></i></a>
+                        </li>
+                    </ul>
+                    
+                    <!-- City selection -->
+                    <div class="city-sm">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">انتخاب شهر<i class="bi bi-geo-alt-fill ms-1"></i></a>
+                        </li>
+                    </div>
+                </div>
             </div>
-              <!-- SECTION navbar expand on computer -->
-              <nav id="navbar" class="navbar navbar-expand-md d-none d-lg-block">
+            
+            <!-- ========== DESKTOP NAVBAR (Hidden on mobile devices) ========== -->
+            <!-- This navbar is shown on large screens (d-none d-lg-block classes) -->
+            <nav id="navbar" class="navbar navbar-expand-md d-none d-lg-block">
                 <div class="container pc-navbar">
                     <a class="navbar-brand" href="./index.html">
                         <figure><img src="./images/logo.svg" alt=""></figure>
@@ -537,73 +581,96 @@
           </div>
         </div>
         <div id="overlay-menu" onclick="overlayOFF()"></div>
+        
+        <!-- ========== MODAL POPUPS ========== -->
+        <!-- Container for popup modals -->
         <div class="d-flex w-100 justify-content-center">
-          <div class="popup" id="popup1">
-            <span><i onclick="hide1()" class="bi bi-x-circle"></i>
-            </span>
-            
-            <div class="row w-100 h-100">
-              <div class="col w-100">
-                <h2>برندی متفاوت</h2>
-                <p>
-                  ماموریت ما ارائه طیف وسیعی از برنامه های کاربردی تجاری آسان است که مجموعه کاملی از ابزارها را برای هر نیاز تجاری تشکیل می دهند. ما به میلیون‌ها شرکت امکان دسترسی آسان به نرم‌افزاری را می‌دهیم که برای اجرا و گسترش کسب‌ و کارشان نیاز دارند.
-                </p>
-                <p>
-                  در اینجا در Amazon ما 30 برنامه اصلی را توسعه داده ایم که به طور مرتب ارتقا می یابند. علاوه بر این، جامعه ما با بیش از 1500 عضو فعال، به بیش از 16000 برنامه کمک کرده است تا طیف گسترده ای از نیازهای تجاری را پوشش دهد.
-                </p>
-                <div style="margin-top:86px">
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-whatsapp"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>         
+            <!-- POPUP 1: About Us Modal -->
+            <div class="popup" id="popup1">
+                <!-- Close button for popup -->
+                <span><i onclick="hide1()" class="bi bi-x-circle"></i></span>
+                
+                <div class="row w-100 h-100">
+                    <!-- Left side: Text content -->
+                    <div class="col w-100">
+                        <h2>برندی متفاوت</h2>
+                        <p>
+                            ماموریت ما ارائه طیف وسیعی از برنامه های کاربردی تجاری آسان است که مجموعه کاملی از ابزارها را برای هر نیاز تجاری تشکیل می دهند. ما به میلیون‌ها شرکت امکان دسترسی آسان به نرم‌افزاری را می‌دهیم که برای اجرا و گسترش کسب‌ و کارشان نیاز دارند.
+                        </p>
+                        <p>
+                            در اینجا در Amazon ما 30 برنامه اصلی را توسعه داده ایم که به طور مرتب ارتقا می یابند. علاوه بر این، جامعه ما با بیش از 1500 عضو فعال، به بیش از 16000 برنامه کمک کرده است تا طیف گسترده ای از نیازهای تجاری را پوشش دهد.
+                        </p>
+                        <!-- Social media links -->
+                        <div style="margin-top:86px">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>         
+                        </div>
+                    </div>
+                    <!-- Right side: Team image -->
+                    <div class="col w-100">
+                        <img class="w-100 h-auto rounded" src="./images/team.webp" alt="">
+                    </div>
                 </div>
-              </div>
-              <div class="col w-100">
-                <img class="w-100 h-auto rounded" src="./images/team.webp" alt="">
-              </div>
             </div>
-  
-          </div>
-          <div class="popup" id="popup2">
-            <span><i onclick="hide2()" class="bi bi-x-circle"></i>
-            </span>
             
-            <div class="row w-100 h-100">
-              <div class="col w-100">
-                <h2>با ما در ارتباط باشید</h2>
-                <form action="#">
-                  <label style="width:49%" class="d-inline-block">
-                    <input type="text" placeholder="نام"/>
-                  </label>
-                  <label style="width:49%" class="d-inline-block">
-                    <input type="text" placeholder="نام خانوادگی"/>
-                  </label>
-                  <label>
-                    <input type="email" placeholder="...ایمیل"/>
-                  </label>
-                  <label>
-                    <textarea placeholder="پیام ..." class="mBox"></textarea>
-                  </label>
-                  <button class="red" type="button">ارسال<i class="bi bi-send-fill"></i></button>
-                </form>
-              </div>
-              <div class="col w-100">
-                <script src="./plugins/playerGIF/player.js"></script>
-                <lottie-player 
-                src="./gif/Work frome Home Mailing F 2.json" speed="1"  style="width:100%; height: 400px;margin-top: -40px"  loop autoplay></lottie-player>
-                <div style="margin-top:-10px">
-                  <a href="#"><i class="bi bi-telephone-fill"></i></a>         
-                  <a href="#"><i class="bi bi-chat-left-dots-fill"></i></a>
-                  <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
-                  <a href="#"><i class="bi bi-envelope-at-fill"></i></a>
-
+            <!-- POPUP 2: Contact Us Modal -->
+            <div class="popup" id="popup2">
+                <!-- Close button for popup -->
+                <span><i onclick="hide2()" class="bi bi-x-circle"></i></span>
+                
+                <div class="row w-100 h-100">
+                    <!-- Left side: Contact form -->
+                    <div class="col w-100">
+                        <h2>با ما در ارتباط باشید</h2>
+                        <form action="#">
+                            <!-- First Name input (left side) -->
+                            <label style="width:49%" class="d-inline-block">
+                                <input type="text" placeholder="نام"/>
+                            </label>
+                            <!-- Last Name input (right side) -->
+                            <label style="width:49%" class="d-inline-block">
+                                <input type="text" placeholder="نام خانوادگی"/>
+                            </label>
+                            <!-- Email input -->
+                            <label>
+                                <input type="email" placeholder="...ایمیل"/>
+                            </label>
+                            <!-- Message textarea -->
+                            <label>
+                                <textarea placeholder="پیام ..." class="mBox"></textarea>
+                            </label>
+                            <!-- Send button -->
+                            <button class="red" type="button">ارسال<i class="bi bi-send-fill"></i></button>
+                        </form>
+                    </div>
+                    <!-- Right side: Animation and contact info -->
+                    <div class="col w-100">
+                        <!-- Load Lottie animation player -->
+                        <script src="./plugins/playerGIF/player.js"></script>
+                        <!-- Animated GIF (Lottie format) -->
+                        <lottie-player 
+                            src="./gif/Work frome Home Mailing F 2.json" 
+                            speed="1"  
+                            style="width:100%; height: 400px;margin-top: -40px"  
+                            loop 
+                            autoplay>
+                        </lottie-player>
+                        <!-- Contact method links -->
+                        <div style="margin-top:-10px">
+                            <a href="#"><i class="bi bi-telephone-fill"></i></a>         
+                            <a href="#"><i class="bi bi-chat-left-dots-fill"></i></a>
+                            <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
+                            <a href="#"><i class="bi bi-envelope-at-fill"></i></a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-  
-          </div>
-          </div>
-        <!-- SECTION main section -->
+        </div>
+        
+        <!-- ========== MAIN CONTENT SECTION ========== -->
+        <!-- Contains sidebar filters and product listing -->
         <section class="main-clothes mt-3">
           <div class="row w-100">
               <div class="col-lg-2 sideMenu d-none d-lg-block ps-4">
@@ -1298,9 +1365,8 @@
 
 
 
-
-
-        <!-- SECTION Footer -->
+        <!-- ========== FOOTER ========== -->
+        <!-- Footer section with company info, social links, and copyright -->
         <footer class="footer-main">
             <div class="footer-top">
               <div class="container">
@@ -1394,51 +1460,65 @@
             </div>
         </footer>
 
-
-
-
-
-
-
-
-
-        <!-- Bootstrap Bundle with Popper -->
+        <!-- ========== EXTERNAL SCRIPTS & LIBRARIES ========== -->
+        <!-- All JavaScript libraries and custom scripts loaded here -->
+        
+        <!-- Bootstrap 5 JavaScript Bundle (includes Popper.js for dropdowns/tooltips) -->
         <script src="./plugins/Bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- Jquery Plugin -->
+        
+        <!-- jQuery Library (DOM manipulation, utilities) -->
         <script src="./plugins/jquery/jquery.min.js"></script>
-        <!-- Card Slider Plugin-->
+        
+        <!-- UIKit - Card/Slider component library -->
         <script src="./plugins/slider/dist/js/uikit.min.js"></script>
         <script src="./plugins/slider/dist/js/uikit-icons.min.js"></script>
-        <!-- fade animation plugin -->
+        
+        <!-- HeroSlider - Slide show plugin -->
         <script src="./node_modules/hero-slider/dist/HeroSlider.js"></script>
+        
+        <!-- AOS (Animate On Scroll) - Animation library for scroll effects -->
         <script src="./plugins/aos/aos.js"></script>
-        <!-- FontAwesome -->
-        <script src="./plugins/fontawesome/icon.js" crossorigin="anonymous"></script>
         <script>
-          AOS.init();
+            // Initialize AOS animations
+            AOS.init();
         </script>
-        <!-- Back To Top & Progress BarScript -->
+        
+        <!-- FontAwesome Icons -->
+        <script src="./plugins/fontawesome/icon.js" crossorigin="anonymous"></script>
+        
+        <!-- Back To Top Button & Progress Bar Script -->
         <script src="./plugins/OnScroll/script.js"></script>
-        <!-- main script -->
-        <script src="./js/script.js"></script>
-        <script src="./js/menu.js"></script>
-        <script src="./js/typing.js"></script>
-        <script src="./js/md-menu-all.js"></script>
-        <script src="./js/card-slider.js"></script>
-        <script src="./js/filter.js"></script>
+        
+        <!-- ========== CUSTOM PROJECT SCRIPTS ========== -->
+        <!-- Main functionality scripts in order of execution -->
+        <script src="./js/script.js"></script>        <!-- General script utilities -->
+        <script src="./js/menu.js"></script>          <!-- Menu functionality -->
+        <script src="./js/typing.js"></script>        <!-- Typing animation -->
+        <script src="./js/md-menu-all.js"></script>   <!-- Mobile menu functionality -->
+        <script src="./js/card-slider.js"></script>   <!-- Product card slider -->
+        <script src="./js/filter.js"></script>        <!-- Product filter functionality -->
+        
+        <!-- ========== MENU INITIALIZATION SCRIPT ========== -->
+        <!-- Configure the MmenuLight offcanvas menu -->
         <script>
-          var menu = new MmenuLight(document.querySelector("#menu"), "all");
+            // Initialize the menu with MmenuLight plugin
+            var menu = new MmenuLight(document.querySelector("#menu"), "all");
+            
+            // Configure navigation
             var navigator = menu.navigation({
+                // Optional settings:
                 // selectedClass: 'Selected',
                 // slidingSubmenus: true,
                 // theme: 'dark',
                 // title: 'Menu'
             });
 
+            // Configure offcanvas drawer
             var drawer = menu.offcanvas({
-                // position: 'left'
+                // position: 'left'  // Can be 'left' or 'right'
             });
-            //	Open the menu.
+            
+            // Open menu when menu link is clicked
             document
                 .querySelector('a[href="#menu"]')
                 .addEventListener("click", (evnt) => {
